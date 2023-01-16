@@ -1,2 +1,9 @@
-# web-playground
-Repository for challenges and projects related to Web development
+# Web Development Playground
+
+## React Code Challenges
+
+- [FAQ component](challenges/faq-component)
+
+
+## Resources
+- [Frontendeval](https://frontendeval.com/)
