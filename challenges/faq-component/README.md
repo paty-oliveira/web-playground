@@ -3,11 +3,11 @@
 ### Description
 Create a re-usable "Frequently Asked Questions" component.
 
-![FQA component](img/faq_mockup.png)
+![FQA component](../img/faq_mockup.png)
 
 It should receive an array of question/answer objects, e.g.
 
-```json
+```
 [
   {
     question: "How many bones does a cat have?",
