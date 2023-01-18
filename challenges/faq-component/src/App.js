@@ -1,4 +1,6 @@
 import './App.css';
+import { useState } from 'react';
+import React from "react";
 
 const faqs = [
   {
@@ -16,19 +18,26 @@ const faqs = [
 ];
 
 function App() {
+  const [ buttonToggle, setButtonToggle ] = useState(false);
+
+  const handleButtonToggle = (event) => {
+    return setButtonToggle(buttonToggle => !buttonToggle);
+  }
+
   return (
     <div className="App">
       <h1>Frequently Asked Questions</h1>
       <div className='faq-container'>
         {
-          faqs.map(faq => {
-            return (
+          faqs.map((faq, index) => {
+             return (
               <div className='faq-card'>
+                <button onClick={handleButtonToggle} >{`>`}</button>
                 <h3>{faq.question}</h3>
-                <h4>{faq.answer}</h4>
+                { buttonToggle && (<h4>{faq.answer}</h4>) }
               </div>
               )
-            })
+             })
         }
       </div>
     </div>
