@@ -1,6 +1,6 @@
 import './App.css';
 import React from "react";
-import { Faq } from './Faq';
+import { Faq } from './faq/Faq';
 
 const faqs = [
   {
