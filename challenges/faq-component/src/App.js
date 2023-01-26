@@ -12,7 +12,7 @@ const faqs = [
     answer: "The average cat sleeps 12-16 hours per day",
   },
   {
-    question: "How long do cats live",
+    question: "How long do cats live?",
     answer: "Outdoor cats live 5 years on average. Indoor\ncats live 15 years on average.",
   },
 ];

@@ -10,18 +10,13 @@ export function Faq({ question, answer }) {
 
     return (
         <div className='faq-container'>
-            <div className='faq-button'>
+            <div className='faq-item'>
                 <button onClick={handleButtonToggle}>{'>'}</button>
+                <h3>{question}</h3>
             </div>
-            <div className='faq-body'>
-                <div className='faq-item'>
-                    <h3>{question}</h3>
-                </div>
-                <div className='faq-item'>
-                    { toggle && <p>{answer}</p>}
-                </div>
+            <div className='faq-item'>
+                { toggle && <p>{answer}</p>}
             </div>
-
         </div>
     )
 }
