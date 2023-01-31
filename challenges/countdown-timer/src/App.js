@@ -9,7 +9,7 @@ function App() {
     const [minutes, setMinutes] = useState('00');
     const [seconds, setSeconds] = useState('00');
     const [milliSecondsTime, setMilliSecondsTime] = useState(0);
-    const [showCountdownPanel, setShowCountdownPanel] = useState(true);
+    const [isCountingDown, setIsCountingDown] = useState(false);
 
     const handleHourChange = (event) => {
         setHour(event.target.value);
@@ -25,7 +25,7 @@ function App() {
 
     const handleStarOrPauseClick = () => {
         setMilliSecondsTime(convertHumanTimeToMilliseconds(hour, minutes, seconds));
-        setShowCountdownPanel(!showCountdownPanel);
+        setIsCountingDown(!isCountingDown);
     };
 
     const handleResetClick = () => {
@@ -68,8 +68,8 @@ function App() {
                     onChange={handleSecondsChange}
                 />
             </span>
-            <button onClick={handleStarOrPauseClick}>{showCountdownPanel ? 'START' : 'PAUSE'}</button>
-            {!showCountdownPanel && <button onClick={handleResetClick}>RESET</button>}
+            <button onClick={handleStarOrPauseClick}>{isCountingDown ? 'PAUSE' : 'START'}</button>
+            {isCountingDown && <button onClick={handleResetClick}>RESET</button>}
         </div>
         <CountDownTimer countdownTimestampMs={milliSecondsTime}/>
     </div>
