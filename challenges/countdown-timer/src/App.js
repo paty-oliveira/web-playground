@@ -1,11 +1,10 @@
 import './App.css';
-import { CountDownTimer } from './timer/CountDownTimer';
+import {CountDownTimer} from "./timer/CountDownTimer";
 
 function App() {
   return (
     <div className="App">
-      <h1>Countdown Timer</h1>
-      <CountDownTimer />
+      <CountDownTimer countdownTimestampMs={1675195200000}/>
     </div>
   );
 }

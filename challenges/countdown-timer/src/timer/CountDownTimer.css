@@ -1,0 +1,12 @@
+.countdown-timer {
+    width: 600px;
+    height: 100px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.countdown-timer span {
+    margin: 0 5px 0 5px;
+}
