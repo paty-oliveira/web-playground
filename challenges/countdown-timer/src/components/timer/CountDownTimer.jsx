@@ -8,18 +8,22 @@ const defaultRemainingTime = {
     minutes: '00',
     hours: '00'
 }
-export function CountDownTimer({hour, minutes, seconds}) {
+export function CountDownTimer({hour, minutes, seconds, isActive}) {
 
     const [remainingTime, setRemainingTime] = useState(defaultRemainingTime);
     const countdownTimestampMs = convertHumanTimeToMilliseconds(hour, minutes, seconds);
 
     useEffect(() => {
-        const intervalId = setInterval(() => {
-            updateRemainingTime(countdownTimestampMs);
-        }, 1000);
+        let intervalId;
+
+        if (isActive) {
+            intervalId = setInterval(() => {
+                updateRemainingTime(countdownTimestampMs);
+            }, 1000);
+        }
         return () => clearInterval(intervalId);
 
-    }, [countdownTimestampMs]);
+    }, [countdownTimestampMs, isActive]);
 
     const updateRemainingTime = (countdown) => {
       setRemainingTime(getRemainingTimeUntilMsTimestamp(countdown));
