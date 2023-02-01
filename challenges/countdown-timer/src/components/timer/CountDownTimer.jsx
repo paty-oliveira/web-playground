@@ -26,11 +26,10 @@ export function CountDownTimer({countdownTimestampMs}) {
     return (
         <div className="countdown-timer">
             <span>{remainingTime.hours}</span>
-            <span>hours</span>
+            <span>:</span>
             <span>{remainingTime.minutes}</span>
-            <span>minutes</span>
+            <span>:</span>
             <span>{remainingTime.seconds}</span>
-            <span>seconds</span>
         </div>
     )
 }

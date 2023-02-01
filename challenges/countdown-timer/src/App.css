@@ -7,8 +7,13 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  border: black solid;
 }
 
 .user-input {
   padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
 }

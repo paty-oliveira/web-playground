@@ -1,7 +1,8 @@
 import './App.css';
-import {CountDownTimer} from "./timer/CountDownTimer";
+import {CountDownTimer} from "./components/timer/CountDownTimer";
+import {CountDownButtons} from "./components/buttons/CountDownButtons";
 import {useState} from "react";
-import {convertHumanTimeToMilliseconds} from "./utils/DateInputUtils";
+import {convertHumanTimeToMilliseconds} from "./components/utils/DateInputUtils";
 
 function App() {
 
@@ -34,44 +35,63 @@ function App() {
 
     return (
     <div className="App">
-        <div className="user-input">
-            <h1>Countdown Timer</h1>
-            <span>
-                <input
-                    type="number"
-                    placeholder="h"
-                    name="hours-input"
-                    min="0"
-                    max="24"
-                    onChange={handleHourChange}
+        <h1>Countdown Timer</h1>
+        {
+            !isCountingDown && <div className="user-input">
+                <span>
+                    <label htmlFor="hours-input"></label>
+                    <input
+                        type="number"
+                        placeholder="h"
+                        name="hours-input"
+                        min="0"
+                        max="24"
+                        onChange={handleHourChange}
+                        required
+                    />
+                </span>
+                <span>:</span>
+                <span>
+                    <label htmlFor="minutes-input"></label>
+                    <input
+                        type="number"
+                        placeholder="m"
+                        name="minutes-input"
+                        min="0"
+                        max="60"
+                        onChange={handleMinutesChange}
+                        required
+                    />
+                </span>
+                <span>:</span>
+                <span>
+                    <label htmlFor="seconds-input"></label>
+                    <input
+                        type="number"
+                        placeholder="s"
+                        name="seconds-input"
+                        min="0"
+                        max="60"
+                        onChange={handleSecondsChange}
+                        required
+                    />
+                </span>
+                <CountDownButtons
+                    isCountingDown={isCountingDown}
+                    handleStarOrPauseClick={handleStarOrPauseClick}
+                    handleResetClick={handleResetClick}
                 />
-            </span>
-            <span>:</span>
-            <span>
-                <input
-                    type="number"
-                    placeholder="m"
-                    name="minutes-input"
-                    min="0"
-                    max="60"
-                    onChange={handleMinutesChange}
-                />
-            </span>
-            <span>:</span>
-            <span>
-                <input
-                    type="number"
-                    placeholder="s"
-                    name="seconds-input"
-                    min="0"
-                    max="60"
-                    onChange={handleSecondsChange}
-                />
-            </span>
-            <button onClick={handleStarOrPauseClick}>{isCountingDown ? 'PAUSE' : 'START'}</button>
-            {isCountingDown && <button onClick={handleResetClick}>RESET</button>}
-        </div>
-        <CountDownTimer countdownTimestampMs={milliSecondsTime}/>
+            </div>
+        }
+        {
+            isCountingDown && <CountDownTimer countdownTimestampMs={milliSecondsTime}/>
+        }
+        {   isCountingDown && <CountDownButtons
+                                isCountingDown={isCountingDown}
+                                handleStarOrPauseClick={handleStarOrPauseClick}
+                                handleResetClick={handleResetClick}
+                            />
+        }
     </div>
     );
 }
