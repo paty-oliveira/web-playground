@@ -2,14 +2,12 @@ import './App.css';
 import {CountDownTimer} from "./components/timer/CountDownTimer";
 import {CountDownButtons} from "./components/buttons/CountDownButtons";
 import {useState} from "react";
-import {convertHumanTimeToMilliseconds} from "./components/utils/DateInputUtils";
 
 function App() {
 
     const [hour, setHour] = useState('00');
     const [minutes, setMinutes] = useState('00');
     const [seconds, setSeconds] = useState('00');
-    const [milliSecondsTime, setMilliSecondsTime] = useState(0);
     const [isCountingDown, setIsCountingDown] = useState(false);
 
     const handleHourChange = (event) => {
@@ -24,8 +22,8 @@ function App() {
         setSeconds(event.target.value);
     }
 
+
     const handleStarOrPauseClick = () => {
-        setMilliSecondsTime(convertHumanTimeToMilliseconds(hour, minutes, seconds));
         setIsCountingDown(!isCountingDown);
     };
 
@@ -84,7 +82,11 @@ function App() {
             </div>
         }
         {
-            isCountingDown && <CountDownTimer countdownTimestampMs={milliSecondsTime}/>
+            isCountingDown && <CountDownTimer
+                                hour={hour}
+                                minutes={minutes}
+                                seconds={seconds}
+            />
         }
         {   isCountingDown && <CountDownButtons
                                 isCountingDown={isCountingDown}
