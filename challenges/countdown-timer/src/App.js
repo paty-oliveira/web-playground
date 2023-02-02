@@ -9,7 +9,6 @@ function App() {
     const [minutes, setMinutes] = useState('00');
     const [seconds, setSeconds] = useState('00');
     const [isCountingDown, setIsCountingDown] = useState(false);
-    const [isActive, setIsActive] = useState(false);
 
     const handleHourChange = (event) => {
         setHour(event.target.value);
@@ -25,12 +24,11 @@ function App() {
 
 
     const handleStarOrPauseClick = () => {
-        setIsActive(!isActive);
         setIsCountingDown(!isCountingDown)
     };
 
     const handleResetClick = () => {
-
+        setIsCountingDown(!isCountingDown)
     }
 
     return (
@@ -88,7 +86,6 @@ function App() {
                                 hour={hour}
                                 minutes={minutes}
                                 seconds={seconds}
-                                isActive={isActive}
             />
         }
         {   isCountingDown && <CountDownButtons

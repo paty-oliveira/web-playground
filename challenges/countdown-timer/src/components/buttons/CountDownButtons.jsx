@@ -7,9 +7,8 @@ export function CountDownButtons(props) {
 
     return (
         <div className="button-container">
-            <button onClick={handleStarOrPauseClick}>{isCountingDown ? 'PAUSE' : 'START'}</button>
+            {!isCountingDown && <button onClick={handleStarOrPauseClick}>START</button>}
             {isCountingDown && <button onClick={handleResetClick}>RESET</button>}
         </div>
     )
-
 }
