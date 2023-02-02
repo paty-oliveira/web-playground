@@ -1,6 +1,6 @@
 # Web Development Playground
 
-## React Code Challenges
+## React Challenges
 
 - [FAQ component](react-challenges/faq-component)
 - [Countdown Timer](react-challenges/countdown-timer)
