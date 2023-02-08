@@ -1,10 +1,21 @@
 export function calculateMonthlyMortgagePayment(loanAmount, interestRate, loanYears) {
-    const numberMonths = loanYears * 12;
-    const monthlyInterestRate = interestRate / 12;
-    const exponents = Math.pow((1 + monthlyInterestRate), numberMonths);
-    const firstPart = monthlyInterestRate * exponents;
-    const secondPart = exponents - 1;
-    const equation = firstPart / secondPart
+    const lengthOfLoan = getNumberOfLoanMonths(loanYears)
+    const monthlyInterestRate = getMonthlyInterestRate(interestRate);
 
-    return (loanAmount * equation).toString();
+    const exponentialOperator = ((monthlyInterestRate + 1) ** lengthOfLoan);
+    const firstDividend = monthlyInterestRate * exponentialOperator;
+    const secondDividend = exponentialOperator - 1;
+    const division = firstDividend / secondDividend;
+    const quotas = (loanAmount * division).toFixed(2);
+
+    return quotas.toString()
+}
+
+function getNumberOfLoanMonths(loanYears) {
+    return loanYears * 12;
+}
+
+function getMonthlyInterestRate(interestRate) {
+    const calculatedInterest = interestRate / 100;
+    return calculatedInterest / 12;
 }

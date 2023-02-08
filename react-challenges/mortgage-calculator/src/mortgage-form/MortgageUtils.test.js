@@ -7,7 +7,7 @@ describe('', () => {
         const loanYear = 30;
 
         const actualResult = calculateMonthlyMortgagePayment(loanAmount, interestRate, loanYear);
-        const expectedResult = "2108";
+        const expectedResult = "2108.02";
 
         expect(actualResult).toEqual(expectedResult);
     });
