@@ -5,7 +5,8 @@ import {MortgageForm} from "./mortgage-form/MortgageForm";
 function App() {
   return (
     <div className="App">
-      <MortgageForm />
+        <h1>Mortgage Calculator</h1>
+        <MortgageForm />
     </div>
   );
 }

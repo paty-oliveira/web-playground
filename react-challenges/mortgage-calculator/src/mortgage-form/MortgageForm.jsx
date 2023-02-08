@@ -64,7 +64,7 @@ export function MortgageForm() {
                 />
             </div>
             <button type="submit" className="btn btn-primary">Calculate</button>
-            { isSubmitted && <p>Your monthly mortgage payment will be <strong>${monthlyPayment}.</strong></p> }
+            { isSubmitted && <p>Your monthly mortgage payment will be <strong>${monthlyPayment}</strong></p> }
         </form>
     )
 }
