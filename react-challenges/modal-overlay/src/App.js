@@ -1,9 +1,14 @@
 import './App.css';
+import React from "react";
 
 function App() {
   return (
     <div className="App">
-      <p>Hello World</p>
+        {/*  Button trigger modal */}
+        <button type="button" className="btn btn-primary">
+          Show Offer
+        </button>
+        {/*  Modal Component  */}
     </div>
   );
 }
