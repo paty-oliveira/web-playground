@@ -21,9 +21,19 @@ function App() {
 
     return (
     <div className="App">
-        { !isHidden && <Button variant="primary" onClick={handleShowOffer}>Show Offer</Button> }
-        { showOffer && <ModalOffer handleAcceptedOffer={handleAcceptedOffer}/> }
-        { accepted && <h3>Offer accepted</h3> }
+        {
+            !isHidden && <Button variant="primary" onClick={handleShowOffer}>Show Offer</Button>
+        }
+        {
+            showOffer && <ModalOffer
+                            show={showOffer}
+                            setShow={setShowOffer}
+                            handleAcceptedOffer={handleAcceptedOffer}
+                        />
+        }
+        {
+            accepted && <h3>Offer accepted</h3>
+        }
     </div>
   );
 }
