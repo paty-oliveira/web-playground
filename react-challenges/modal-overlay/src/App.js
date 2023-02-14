@@ -1,6 +1,7 @@
 import './App.css';
 import React, {useState} from "react";
 import {ModalOffer} from "./components/ModalOffer";
+import Button from "react-bootstrap/Button";
 
 function App() {
 
@@ -20,9 +21,7 @@ function App() {
 
     return (
     <div className="App">
-        {!isHidden && <button type="button" className="btn btn-primary" onClick={handleShowOffer}>
-          Show Offer
-        </button>}
+        { !isHidden && <Button variant="primary" onClick={handleShowOffer}>Show Offer</Button> }
         { showOffer && <ModalOffer handleAcceptedOffer={handleAcceptedOffer}/> }
         { accepted && <h3>Offer accepted</h3> }
     </div>
