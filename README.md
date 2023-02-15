@@ -6,6 +6,7 @@
 - [Countdown Timer](react-challenges/countdown-timer)
 - [Mortgage Calculator](react-challenges/mortgage-calculator)
 - [Modal Overlay](react-challenges/modal-overlay)
+- [Undoable Counter](react-challenges/undoable-counter)
 
 ## Javascript Challenges
 - [My own version of map](js-challenges/my-own-map)
