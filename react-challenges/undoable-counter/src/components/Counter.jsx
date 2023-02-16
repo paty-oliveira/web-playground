@@ -5,11 +5,23 @@ import Button from "react-bootstrap/Button";
 export function Counter() {
 
     const [counter, setCounter] = useState(0);
+    const [history, setHistory] = useState([]);
+    const buttonNegativeValues = ["-100", "-10", "-1"];
+    const buttonPositiveValues = ["+1", "+10", "+100"];
+
+    const createNewHistoricEntry = (action) => {
+        return {
+            action: action,
+            previousValue: counter,
+            currentValue:  counter + parseInt(action)
+        }
+    }
 
     const handleClickButton = (event) => {
         event.preventDefault();
-        const currentNumber = parseInt(event.target.value);
-        setCounter(counter + currentNumber);
+        const currentButtonValue = event.target.value;
+        setCounter(counter + parseInt(currentButtonValue));
+        setHistory(previous => [...previous, createNewHistoricEntry(currentButtonValue)])
     }
 
     return (
@@ -19,20 +31,19 @@ export function Counter() {
                 <Button>Redo</Button>
             </div>
             <div className="counter-actions">
-                <div className="counter-buttons" onClick={handleClickButton}>
-                    <Button className="btn-secondary" value="-100">-100</Button>
-                    <Button className="btn-secondary" value="-10">-10</Button>
-                    <Button className="btn-secondary" value="-1">-1</Button>
+                <div className="counter-buttons">
+                    {buttonNegativeValues.map(value => <Button className="btn-secondary" value={value} onClick={handleClickButton}>{value}</Button>)}
                 </div>
                 {counter}
-                <div className="counter-buttons" onClick={handleClickButton}>
-                    <Button className="btn-secondary" value="+1">+1</Button>
-                    <Button className="btn-secondary" value="+10">+10</Button>
-                    <Button className="btn-secondary" value="+100">+100</Button>
+                <div className="counter-buttons">
+                    {buttonPositiveValues.map(value => <Button className="btn-secondary" value={value} onClick={handleClickButton}>{value}</Button>)}
                 </div>
             </div>
-            <div className="counter-history">
+            <div >
                 <h4>History</h4>
+                <ul className="counter-history">
+                    {history.map(element => <li>{element.action} &emsp; ({element.previousValue} -> {element.currentValue})</li>)}
+                </ul>
             </div>
         </div>
     )

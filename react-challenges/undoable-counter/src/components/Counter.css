@@ -24,3 +24,22 @@
     align-items: center;
     gap: 2px;
 }
+
+.counter-history {
+    width: 15%;
+    border: 3px solid  black;
+    padding: 10px;
+    margin: auto auto 50px;
+}
+
+.counter-history ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.counter-history li {
+    padding:10px;
+    position: relative;
+}
