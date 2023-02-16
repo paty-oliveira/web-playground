@@ -1,0 +1,75 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: http://localhost:3000/
+Subject: Counter/title> <script defer src="/static/js/bundle.js"></script></head> <body> <noscript>You need to enable JavaScript to run this app.</noscript> <div id="root"></div> <!-- This HTML file is a template. If you open it directly in the browser, you will see an empty page. You can add webfonts, meta tags, or analytics to this file. The build step will place the bundled scripts into the <body> tag. To begin the development, run `npm start` or `yarn start`. To create a production bundle, use `npm run build` or `yarn build`. --> </body> </html>
+Date: Thu, 16 Feb 2023 17:54:24 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--HNfeBXfi4GN7YIkwgGlyeHZZgJohX5xr4Tg0oAq0KU----"
+
+
+------MultipartBoundary--HNfeBXfi4GN7YIkwgGlyeHZZgJohX5xr4Tg0oAq0KU----
+Content-Type: text/html
+Content-ID: <frame-6339F6179D013F1B9E0BA75A85B65671@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://localhost:3000/
+
+<!DOCTYPE html><html lang=3D"en"><head><meta http-equiv=3D"Content-Type" co=
+ntent=3D"text/html; charset=3DUTF-8">
+   =20
+    <link rel=3D"icon" href=3D"http://localhost:3000/favicon.ico">
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1">
+    <meta name=3D"theme-color" content=3D"#000000">
+    <meta name=3D"description" content=3D"Web site created using create-rea=
+ct-app">
+    <link rel=3D"apple-touch-icon" href=3D"http://localhost:3000/logo192.pn=
+g">
+    <!--
+      manifest.json provides metadata used when your web app is installed o=
+n a
+      user's mobile device or desktop. See https://developers.google.com/we=
+b/fundamentals/web-app-manifest/
+    -->
+    <link rel=3D"manifest" href=3D"http://localhost:3000/manifest.json">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the bu=
+ild.
+      Only files inside the `public` folder can be referenced from the HTML=
+.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public UR=
+L.
+      Learn how to configure a non-root public URL by running `npm run buil=
+d`.
+    -->
+    <title>Counter/title&gt;
+  &lt;script defer src=3D"/static/js/bundle.js"&gt;&lt;/script&gt;&lt;/head=
+&gt;
+  &lt;body&gt;
+    &lt;noscript&gt;You need to enable JavaScript to run this app.&lt;/nosc=
+ript&gt;
+    &lt;div id=3D"root"&gt;&lt;/div&gt;
+    &lt;!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the &lt;body&gt; t=
+ag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    --&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</title></head><body data-new-gr-c-s-check-loaded=3D"14.1097.0" data-gr-ext=
+-installed=3D""></body><grammarly-desktop-integration data-grammarly-shadow=
+-root=3D"true"><template shadowmode=3D"open"><div aria-label=3D"grammarly-i=
+ntegration" role=3D"group" tabindex=3D"-1" class=3D"grammarly-desktop-integ=
+ration" data-content=3D"{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&q=
+uot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-d=
+esktop-integration></html>
+------MultipartBoundary--HNfeBXfi4GN7YIkwgGlyeHZZgJohX5xr4Tg0oAq0KU------
