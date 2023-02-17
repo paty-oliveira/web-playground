@@ -33,13 +33,13 @@
 }
 
 .counter-history ul {
-    list-style-type: none;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .counter-history li {
+    list-style-type: none;
     padding:10px;
     position: relative;
 }
