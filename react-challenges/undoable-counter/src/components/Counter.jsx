@@ -54,7 +54,11 @@ export function Counter() {
             <div >
                 <h4>History</h4>
                 <ul className="counter-history">
-                    {history.map((element, index) => <li key={index}>{element.action} &emsp; ({element.previousValue} -> {element.currentValue})</li>)}
+                    {
+                        history.map((element, index) =>
+                            <li key={index}>{element.action} &emsp; ({element.previousValue} -> {element.currentValue})</li>
+                        ).filter((element, index) => index < 50)
+                    }
                 </ul>
             </div>
         </div>
