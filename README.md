@@ -10,6 +10,7 @@
 
 ## Javascript Challenges
 - [My own version of map](js-challenges/my-own-map)
+- [Average of Orders for every weekday](js-challenges/orders-avg)
 
 ## Resources
 - [Frontendeval](https://frontendeval.com/)
