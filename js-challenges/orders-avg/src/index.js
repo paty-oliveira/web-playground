@@ -4,28 +4,32 @@ export default class OrdersAnalyzer {
     }
 
     averageDailySales(productId, orders) {
-        const listOfOrders = orders.orders;
-
-        const dailyOrders = {}
-
-        for (let order in listOfOrders) {
-            let creationDate = new Date(listOfOrders[order].creationDate)
-            let day = this.weekdays[creationDate.getDay()]; // improve that part by having a default obj with all the days
-            dailyOrders[day] = 0
-
-            const orderLines = listOfOrders[order].orderLines
-            for (let item in orderLines) {
-                if (orderLines[item].productId === productId)
-                    dailyOrders[day] += orderLines[item].quantity
-            }
+        let dailySales = {
+            "SUNDAY": 0,
+            "MONDAY": 0,
+            "TUESDAY": 0,
+            "WEDNESDAY": 0,
+            "THURSDAY": 0,
+            "FRIDAY": 0,
+            "SATURDAY": 0,
         }
 
-        for (let weekday in this.weekdays){ // this should be removed after
-            if (!dailyOrders.hasOwnProperty(this.weekdays[weekday])){
-                dailyOrders[this.weekdays[weekday]] = 0
+        const ordersList = orders.orders;
+        let quantity = 0
+
+        for (let orderIndex in ordersList){
+            let creationDate = new Date(ordersList[orderIndex].creationDate);
+            let day = this.weekdays[creationDate.getDay()];
+
+            let orderLinesList = ordersList[orderIndex].orderLines
+
+            for (let orderLineIndex in orderLinesList) {
+                if (orderLinesList[orderLineIndex].productId === productId){
+                    quantity = orderLinesList[orderLineIndex].quantity
+                    dailySales[day] += quantity
+                }
             }
         }
-
-        return dailyOrders
+        return dailySales
     }
 }

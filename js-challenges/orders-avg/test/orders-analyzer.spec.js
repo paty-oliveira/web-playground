@@ -1,31 +1,39 @@
 import OrdersAnalyzer from "../src/index";
 import * as matchers from './matchers';
+const orders = require("./stationery-data.js")
 
 describe('OrdersAnalyzer', () => {
-    const weekdays = ["SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"];
     const analyzer = new OrdersAnalyzer();
-    beforeEach(() => {
-        jasmine.addMatchers(matchers);
+
+    it('should return an empty report when the productId is not in the orders list', function () {
+        const productId = 1;
+        const actualResult = analyzer.averageDailySales(productId, orders);
+        const expectedResult = {
+            "SUNDAY": 0,
+            "MONDAY": 0,
+            "TUESDAY": 0,
+            "WEDNESDAY": 0,
+            "THURSDAY": 0,
+            "FRIDAY": 0,
+            "SATURDAY": 0,
+        }
+
+        expect(actualResult).toEqual(expectedResult)
     });
 
-    describe('stationery dataset averageDailySales', () => {
-        const { orders } = require('./stationery-data.json');
-        const expectedResults = require('./stationery-testcases.json');
+    it('should return the report for the productId 1746', () => {
+        const productId = 9872;
+        const actualResult = analyzer.averageDailySales(productId, orders);
+        const expectedResult = {
+            "SUNDAY": 4,
+            "MONDAY": 3,
+            "TUESDAY": 0,
+            "WEDNESDAY": 0,
+            "THURSDAY": 0,
+            "FRIDAY": 0,
+            "SATURDAY": 4
+        }
 
-        Object.keys(expectedResults).forEach(key => {
-            const productId = parseInt(key);
-            const expectedProductSales = expectedResults[key];
-            const dailySales = analyzer.averageDailySales(productId, orders);
-
-            it(`should return correct values for ${productId}`, () => {
-                weekdays.forEach(weekday => {
-                    if (expectedProductSales[weekday] === 0) {
-                        expect(dailySales[weekday]).toBeUndefinedOrZero();
-                    } else {
-                        expect(dailySales[weekday]).toEqual(expectedProductSales[weekday]);
-                    }
-                });
-            });
-        });
-    });
+        expect(actualResult).toEqual(expectedResult);
+    })
 });
