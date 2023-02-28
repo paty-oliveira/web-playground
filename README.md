@@ -11,7 +11,8 @@
 ## Javascript Challenges
 - [My own version of map](js-challenges/my-own-map)
 - [Average of Orders for every weekday](js-challenges/orders-avg)
-- [Naughty or Nice](js-challenges/)
+- [Naughty or Nice](js-challenges/naughty-or-nice)
+- [Search JSON for any key value pair](js-challenges/search-key-value)
 
 ## Resources
 - [Frontendeval](https://frontendeval.com/)
