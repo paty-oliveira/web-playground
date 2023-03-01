@@ -13,6 +13,8 @@
 - [Average of Orders for every weekday](js-challenges/orders-avg)
 - [Naughty or Nice](js-challenges/naughty-or-nice)
 - [Search JSON for any key value pair](js-challenges/search-key-value)
+- [Seventh JSON of a seventh JSON](js-challenges/seventh-json)
+
 
 ## Resources
 - [Frontendeval](https://frontendeval.com/)

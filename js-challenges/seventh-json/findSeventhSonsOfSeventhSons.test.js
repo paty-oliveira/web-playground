@@ -1,0 +1,1 @@
+const findSeventhSonsOfSeventhSons = require('./findSeventhSonsOfSeventhSons');
