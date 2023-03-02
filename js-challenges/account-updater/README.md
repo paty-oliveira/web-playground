@@ -11,7 +11,8 @@ Finish this function:
 
 The function accepts "Accounts" and returns the same list updated. The list of accounts is a JSON object:
 
-```var accounts = {
+```javascript
+var accounts = {
   "Accounts": [
     {
       "Id": 21,
@@ -23,11 +24,13 @@ The function accepts "Accounts" and returns the same list updated. The list of a
       // ...
     }
   ]
-}```
+}
+```
 
 The function accepts a list of "Logons" that is a JSON object:
 
-```var logons = {
+```javascript
+var logons = {
   "Logons": [
     {
       "Id": 21,
@@ -38,7 +41,8 @@ The function accepts a list of "Logons" that is a JSON object:
       // ...
     }
   ]
-}```
+}
+```
 
 The updates must follow this pattern:
 
