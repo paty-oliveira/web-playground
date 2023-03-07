@@ -7,6 +7,7 @@
 - [Mortgage Calculator](react-challenges/mortgage-calculator)
 - [Modal Overlay](react-challenges/modal-overlay)
 - [Undoable Counter](react-challenges/undoable-counter)
+- [Shopping List](react-challenges/shopping-list)
 
 ## Javascript Challenges
 
