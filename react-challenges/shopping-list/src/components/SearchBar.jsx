@@ -4,6 +4,8 @@ import {foodApiResponse} from "../fakeServer/getGrocery";
 
 export function SearchBar() {
 	const [searchItem, setSearchItem] = useState("");
+	const [shoppingList, setShoppingList] = useState([]);
+	const [checked, setChecked] = useState(false);
 
 	const handleChangeSearchBar = (event) => {
 		event.preventDefault();
@@ -15,6 +17,15 @@ export function SearchBar() {
 		setSearchItem(event.currentTarget.textContent);
 	}
 
+	const handleAddItemsToList = () => {
+		setShoppingList((shoppingList) => [...shoppingList, searchItem]);
+		setSearchItem("");
+	}
+
+	const handleCheckBoxChange = () => {
+		setChecked(!checked);
+	}
+
 	return (
 		<div className="search-container">
 			<div className="search-bar">
@@ -23,8 +34,7 @@ export function SearchBar() {
 					placeholder="Search grocery item"
 					value={searchItem}
 					onChange={handleChangeSearchBar}/>
-				<button>Add</button>
-				{/* Need to implement Add button logic */}
+				<button onClick={handleAddItemsToList}>Add</button>
 			</div>
 			<div className="dropdown-container">
 				{
@@ -41,6 +51,22 @@ export function SearchBar() {
 							</div>
 						)
 				}
+			</div>
+			<div className="shopping-list">
+				<ul>
+					{
+						shoppingList
+							.map((item, index) =>
+								<li key={index} className="shopping-items">
+									<input value={item} type="checkbox" checked={checked} onChange={handleCheckBoxChange}/>
+									<label>{item}</label>
+								</li>
+							)
+					}
+				{/*	Add underline when the checkbox is active */}
+				{/*	Fix checkbox state issue */}
+				</ul>
+
 			</div>
 		</div>
 	);

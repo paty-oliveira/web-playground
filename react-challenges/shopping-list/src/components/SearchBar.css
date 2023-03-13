@@ -27,3 +27,19 @@
     text-align: start;
     margin: 2px 0;
 }
+
+.shopping-list {
+    padding: 25px;
+    display: flex;
+    margin: auto;
+}
+
+.shopping-items {
+    list-style-type: none;
+    padding: 10px;
+    text-align: start;
+}
+
+.shopping-items label {
+    padding-left: 10px;
+}
