@@ -1,11 +1,17 @@
 import {useState} from "react";
 import './SearchBar.css';
 import {foodApiResponse} from "../fakeServer/getGrocery";
+import * as PropTypes from "prop-types";
+import {ShoppingList} from "./ShoppingList";
+
+
+ShoppingList.propTypes = {
+	shoppingList: PropTypes.arrayOf(PropTypes.any)
+};
 
 export function SearchBar() {
 	const [searchItem, setSearchItem] = useState("");
 	const [shoppingList, setShoppingList] = useState([]);
-	const [checked, setChecked] = useState(new Array(shoppingList.length).fill(false));
 
 	const handleChangeSearchBar = (event) => {
 		event.preventDefault();
@@ -22,12 +28,6 @@ export function SearchBar() {
 		setSearchItem("");
 	}
 
-	const handleCheckBoxChange = (position) => {
-		const updatedState = checked.map((item, index) =>
-			index === position ? !item : item
-		)
-		setChecked(updatedState);
-	}
 
 	return (
 		<div className="search-container">
@@ -55,25 +55,7 @@ export function SearchBar() {
 						)
 				}
 			</div>
-			<div className="shopping-list">
-				<ul>
-					{
-						shoppingList
-							.map((item, index) =>
-								<li key={index} className="shopping-items">
-									<input
-										className="item-checkbox"
-										value={item}
-										type="checkbox"
-										checked={checked[index]}
-										onChange={handleCheckBoxChange}
-									/>
-									<label className="item-name">{item}</label>
-								</li>
-							)
-					}
-				</ul>
-			</div>
+			<ShoppingList shoppingList={shoppingList}/>
 		</div>
 	);
 }
