@@ -1,7 +1,6 @@
 .shopping-list {
-    padding: 25px;
-    display: flex;
     margin: auto;
+    width: 300px;
 }
 
 .shopping-items {
