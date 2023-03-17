@@ -1,5 +1,5 @@
 import './SearchBar.css';
-import {foodApiResponse} from "../fakeServer/getGrocery";
+import {foodApiResponse} from "../../fakeServer/getGrocery";
 
 export function SearchBar(props) {
 
