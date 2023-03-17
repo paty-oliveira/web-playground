@@ -13,6 +13,17 @@
     padding-left: 10px;
 }
 
+.item-checkbox {
+    width: 20px;
+    height: 20px;
+}
+
 .item-checkbox:checked + .item-name {
     text-decoration: black 2px line-through;
+}
+
+.removal-btn {
+    float: right;
+    margin: auto;
+    text-align: center;
 }

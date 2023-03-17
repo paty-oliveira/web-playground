@@ -28,6 +28,7 @@ export function ShoppingList(props) {
 									onChange={handleCheckBoxChange}
 								/>
 								<label className="item-name">{item}</label>
+								<button className="removal-btn">x</button>
 							</li>
 						)
 				}
