@@ -2,7 +2,10 @@ import {useState} from "react";
 import './ShoppingList.css';
 
 export function ShoppingList(props) {
-	const [checked, setChecked] = useState(new Array(props.shoppingList.length).fill(false));
+
+	const {shoppingList} = props;
+	const [checked, setChecked] = useState(new Array(shoppingList.length).fill(false));
+
 	const handleCheckBoxChange = (position) => {
 		const updatedState = checked.map((item, index) =>
 			index === position ? !item : item
@@ -14,7 +17,7 @@ export function ShoppingList(props) {
 		<div className="shopping-list">
 			<ul>
 				{
-					props.shoppingList
+					shoppingList
 						.map((item, index) =>
 							<li key={index} className="shopping-items">
 								<input

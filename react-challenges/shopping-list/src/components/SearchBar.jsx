@@ -1,18 +1,9 @@
-import {useState} from "react";
 import './SearchBar.css';
 import {foodApiResponse} from "../fakeServer/getGrocery";
-import * as PropTypes from "prop-types";
-import {ShoppingList} from "./ShoppingList";
 
+export function SearchBar(props) {
 
-ShoppingList.propTypes = {
-	shoppingList: PropTypes.arrayOf(PropTypes.any)
-};
-
-export function SearchBar() {
-	const [searchItem, setSearchItem] = useState("");
-	const [shoppingList, setShoppingList] = useState([]);
-
+	const {setSearchItem, searchItem, addItemsToShoppingList} = props;
 	const handleChangeSearchBar = (event) => {
 		event.preventDefault();
 		setSearchItem(event.target.value);
@@ -21,11 +12,6 @@ export function SearchBar() {
 	const handleClickSuggestionItem = (event) => {
 		event.preventDefault();
 		setSearchItem(event.currentTarget.textContent);
-	}
-
-	const handleAddItemsToList = () => {
-		setShoppingList((shoppingList) => [...shoppingList, searchItem]);
-		setSearchItem("");
 	}
 
 
@@ -37,7 +23,7 @@ export function SearchBar() {
 					placeholder="Search grocery item"
 					value={searchItem}
 					onChange={handleChangeSearchBar}/>
-				<button onClick={handleAddItemsToList}>Add</button>
+				<button onClick={addItemsToShoppingList}>Add</button>
 			</div>
 			<div className="dropdown-container">
 				{
@@ -55,7 +41,6 @@ export function SearchBar() {
 						)
 				}
 			</div>
-			<ShoppingList shoppingList={shoppingList}/>
 		</div>
 	);
 }
