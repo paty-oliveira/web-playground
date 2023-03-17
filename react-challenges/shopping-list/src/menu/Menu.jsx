@@ -21,6 +21,7 @@ export function Menu() {
 			/>
 			<ShoppingList
 				shoppingList={shoppingList}
+				setShoppingList={setShoppingList}
 			/>
 		</div>
 

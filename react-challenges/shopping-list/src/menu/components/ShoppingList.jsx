@@ -3,7 +3,7 @@ import './ShoppingList.css';
 
 export function ShoppingList(props) {
 
-	const {shoppingList} = props;
+	const {shoppingList, setShoppingList} = props;
 	const [checked, setChecked] = useState(new Array(shoppingList.length).fill(false));
 
 	const handleCheckBoxChange = (position) => {
@@ -11,6 +11,13 @@ export function ShoppingList(props) {
 			index === position ? !item : item
 		)
 		setChecked(updatedState);
+	}
+
+	const handleItemRemovalFromShoppingList = (position) => {
+		const updatedShoppingList = shoppingList.filter((item, index) => {
+			return shoppingList.indexOf(item) !== position
+		})
+	// 	Need to complete this part
 	}
 
 	return (
@@ -28,7 +35,7 @@ export function ShoppingList(props) {
 									onChange={handleCheckBoxChange}
 								/>
 								<label className="item-name">{item}</label>
-								<button className="removal-btn">x</button>
+								<button className="removal-btn" onClick={handleItemRemovalFromShoppingList}>x</button>
 							</li>
 						)
 				}
