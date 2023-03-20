@@ -12,6 +12,11 @@ export function Menu() {
 		setSearchItem("");
 	}
 
+	const removeItemFromShoppingList = (index) => {
+		const newShoppingList = shoppingList.filter((item, itemIndex) => index !== itemIndex);
+		setShoppingList(newShoppingList);
+	}
+
 	return (
 		<div className="menu-container">
 			<SearchBar
@@ -21,7 +26,7 @@ export function Menu() {
 			/>
 			<ShoppingList
 				shoppingList={shoppingList}
-				setShoppingList={setShoppingList}
+				removeItemFromShoppingList={removeItemFromShoppingList}
 			/>
 		</div>
 
