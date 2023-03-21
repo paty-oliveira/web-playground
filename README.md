@@ -17,6 +17,7 @@
 - [Search JSON for any key value pair](js-challenges/search-key-value)
 - [Seventh JSON of a seventh JSON](js-challenges/seventh-json)
 - [JSON Account Updater](js-challenges/account-updater)
+- [List Filtering](js-challenges/list-filtering)
 
 ## Resources
 
