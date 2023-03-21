@@ -1,7 +1,9 @@
 function getAttendees(invitedPeople, peopleResponses) {
-	return peopleResponses
-		.filter(response => response.response === 'accepted')
-		.map(people => people.name)
+	const personsDeclined = peopleResponses
+		.filter(response => response.response === 'declined')
+		.map(person => person.name);
+
+	return invitedPeople.filter(person => !personsDeclined.includes(person))
 }
 
 module.exports = getAttendees;
