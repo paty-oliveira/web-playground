@@ -18,6 +18,8 @@
 - [Seventh JSON of a seventh JSON](js-challenges/seventh-json)
 - [JSON Account Updater](js-challenges/account-updater)
 - [List Filtering](js-challenges/list-filtering)
+- [Santa's Master Plan](js-challenges/santa-master-plan)
+
 
 ## Resources
 
