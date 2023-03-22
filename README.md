@@ -19,6 +19,7 @@
 - [JSON Account Updater](js-challenges/account-updater)
 - [List Filtering](js-challenges/list-filtering)
 - [Santa's Master Plan](js-challenges/santa-master-plan)
+- [Filter Unused Digits](js-challenges/unused-digits)
 
 
 ## Resources
