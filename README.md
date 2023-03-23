@@ -8,6 +8,7 @@
 - [Modal Overlay](react-challenges/modal-overlay)
 - [Undoable Counter](react-challenges/undoable-counter)
 - [Shopping List](react-challenges/shopping-list)
+- [Rolling Dice](react-challenges/rolling-dice)
 
 ## Javascript Challenges
 
