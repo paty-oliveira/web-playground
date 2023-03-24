@@ -2,12 +2,24 @@ import './App.css';
 import Button from "react-bootstrap/Button";
 import {useState} from "react";
 
+const rollDiceRandomly = () => {
+	const min = 1;
+	const max = 6;
+	return Math.floor(Math.random() * (max - min) + min);
+}
 function App() {
 
-	const [diceNumber, setDiceNumber] = useState("0");
-
+	const [userInput, setUserInput] = useState(0);
+	const [totalDices, setTotalDices] = useState([]);
 	const handleDiceNumberChange = (event) => {
-		setDiceNumber(event.target.value);
+		setUserInput(parseInt(event.target.value));
+		setTotalDices([]);
+	}
+
+	const handleRollClick = (event) => {
+		event.preventDefault();
+		const currentDices = Array.from({length: userInput}, () => rollDiceRandomly());
+		setTotalDices(currentDices);
 	}
 
 	return (
@@ -21,7 +33,20 @@ function App() {
 					max={99}
 					onChange={handleDiceNumberChange}
 				/>
-				<Button className="rolling-item" variant="primary">Roll</Button>
+				<Button
+					className="rolling-item"
+					variant="primary"
+					type="submit"
+					onClick={handleRollClick}
+				>Roll
+				</Button>
+			</div>
+			<div className="dice-container">
+				{
+					totalDices.map((number, index) => (
+						<div key={index} className="dice-item">{number}</div>)
+					)
+				}
 			</div>
 		</div>
 	);
