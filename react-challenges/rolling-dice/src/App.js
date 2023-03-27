@@ -1,12 +1,14 @@
 import './App.css';
 import Button from "react-bootstrap/Button";
 import {useState} from "react";
+import {Dice} from "./components/Dice";
 
 const rollDiceRandomly = () => {
 	const min = 1;
 	const max = 6;
 	return Math.floor(Math.random() * (max - min) + min);
 }
+
 function App() {
 
 	const [userInput, setUserInput] = useState(0);
@@ -44,7 +46,9 @@ function App() {
 			<div className="dice-container">
 				{
 					totalDices.map((number, index) => (
-						<div key={index} className="dice-item">{number}</div>)
+						<div key={index} className="dice">
+							<Dice key={index} value={number}/>
+						</div>)
 					)
 				}
 			</div>
