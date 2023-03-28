@@ -46,7 +46,7 @@ function App() {
 			<div className="dice-container">
 				{
 					totalDices.map((number, index) => (
-						<div key={index} className="dice">
+						<div key={index}>
 							<Dice key={index} value={number}/>
 						</div>)
 					)
