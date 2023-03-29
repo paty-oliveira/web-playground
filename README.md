@@ -22,6 +22,10 @@
 - [Santa's Master Plan](js-challenges/santa-master-plan)
 - [Filter Unused Digits](js-challenges/unused-digits)
 
+## CSS Experimentations
+
+- [Box Model](css-exp/box-model/)
+
 
 ## Resources
 
