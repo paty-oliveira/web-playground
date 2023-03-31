@@ -1,0 +1,50 @@
+:root {
+    padding: 50px;
+    margin: auto;
+}
+
+input:invalid {
+    border-color: red;
+}
+
+input:valid {
+    border-color: green;
+}
+
+button {
+    background-color: blue;
+    color: white;
+    border: blue;
+    font-weight: bolder;
+    border-radius: 10%;
+    padding: 15px;
+}
+
+button:active {
+    transform: scale(0.99);
+    box-shadow: none;
+}
+
+.main-1, .main-2 {
+    margin-top: 100px;
+    border: black solid;
+    width: 500px;
+    height: 200px;
+}
+
+.child-1, .child-2 {
+    border: black solid;
+    padding: 22px;
+}
+
+.child-1:first-child, .child-1:last-child {
+    background-color: aqua;
+}
+
+.child-2:nth-child(even) {
+    background-color: red;
+}
+
+.child-2:nth-child(2n + 1) {
+    border-radius: 20%;
+}

@@ -26,6 +26,7 @@
 
 - [Box Model](css-exp/box-model/)
 - [Pseudo-elements](css-exp/pseudo-elements/)
+- [Pseudo-classes](css-exp/pseudo-classes)
 
 
 ## Resources
