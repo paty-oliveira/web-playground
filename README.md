@@ -25,6 +25,7 @@
 ## CSS Experimentations
 
 - [Box Model](css-exp/box-model/)
+- [Pseudo-elements](css-exp/pseudo-elements/)
 
 
 ## Resources
