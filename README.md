@@ -28,6 +28,7 @@
 - [Pseudo-elements](css-exp/pseudo-elements/)
 - [Pseudo-classes](css-exp/pseudo-classes)
 - [Flexbox](css-exp/flexbox)
+- [Grid Layout](css-exp/grid)
 
 
 ## Resources
