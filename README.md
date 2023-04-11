@@ -21,6 +21,7 @@
 - [List Filtering](js-challenges/list-filtering)
 - [Santa's Master Plan](js-challenges/santa-master-plan)
 - [Filter Unused Digits](js-challenges/unused-digits)
+- [Count Characters in a String](js-challenges/count-chars)
 
 ## CSS Experimentations
 
