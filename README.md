@@ -9,6 +9,7 @@
 - [Undoable Counter](react-challenges/undoable-counter)
 - [Shopping List](react-challenges/shopping-list)
 - [Rolling Dice](react-challenges/rolling-dice)
+- [Multi-Step Form](react-challenges/multi-step-form)
 
 ## Javascript Challenges
 
