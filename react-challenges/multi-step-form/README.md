@@ -13,3 +13,15 @@ The specs are as follows:
 3. On the last screen, provide a submit button that calls a ```js handleSubmit({ name: ..., email: ..., password: ... })```
 function passing in the values of all the fields
 4. Show a success screen
+
+## Notes about the form structure:
+
+For the form logic, we'll use the React Hook Form library, which greatly simplifies working with forms.
+For the central store, we'll use React Context, although a separate state management library (e.g., Redux) could be a
+better fit for more complicated cases. Lastly, each form step will have its own route, for which we'll use React Router.
+
+To summarize, the app flow is as follows:
+
+- Each step is a separate form with its own handlers and local state.
+- Pressing Next submits the data from the current step to the centralized store and redirects to the route for the next step.
+- At the final step, all the data is shown, and users can edit any of the steps before submitting.
