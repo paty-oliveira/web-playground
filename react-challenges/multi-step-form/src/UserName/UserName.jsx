@@ -5,7 +5,7 @@ export function UserName() {
 	const { register} = useForm();
 
 	return (
-		<form>
+		<form aria-label={"user name"}>
 			<div className={"user-information"}>
 				<label htmlFor={"name"}>Name</label>
 				<input
