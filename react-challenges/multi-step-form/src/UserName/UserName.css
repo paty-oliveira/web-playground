@@ -1,0 +1,17 @@
+.user-information {
+    display: flex;
+    flex-flow: wrap column;
+    width: max-content;
+    margin: auto;
+}
+
+.user-information label {
+    margin-bottom: 0.5rem;
+    text-align: left;
+    font-weight: bold;
+}
+
+.user-information input {
+    margin-bottom: 2rem;
+}
+
