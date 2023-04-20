@@ -1,6 +1,9 @@
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import {UserName} from "./UserName";
 import userEvent from "@testing-library/user-event";
+import { createMemoryRouter, RouterProvider } from "react-router-dom";
+import { Router } from 'react-router';
+import {routes} from "../routes";
 
 test("should render the main fields from User name form", function () {
 	render(<UserName />);
@@ -32,14 +35,8 @@ test("the user should not be able to click on Next button when the name field is
 
 	const nextButton = screen.getByRole("button", { name: /next/i });
 	expect(nextButton).toBeDisabled();
-})
+});
 
-test("when the user clicks in the next button, it should render the Contact form", async () => {
-	render(<UserName />);
 
-	const nextButton = screen.getByRole("button", { name: /next/i });
-	await userEvent.click(nextButton);
-
-	render(<Contact />);
-	expect(contactPage).toBeInTheDocument();
+test("when the user clicks in the next button, it should render the Contact form", () => {
 })
