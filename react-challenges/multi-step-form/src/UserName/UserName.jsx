@@ -1,8 +1,15 @@
 import {useForm} from "react-hook-form";
 import "./UserName.css";
+import {useState} from "react";
 
 export function UserName() {
-	const { register} = useForm();
+	const [ name, setName ] = useState("");
+	const [ isDisabled, setIsDisabled ] = useState(true);
+
+	function handleChange(e) {
+		setName(e.target.value);
+		setIsDisabled(!isDisabled);
+	}
 
 	return (
 		<form aria-label={"user name"}>
@@ -12,8 +19,10 @@ export function UserName() {
 					id={"name"}
 					type={"text"}
 					aria-label={"user name"}
-					{...register("name")}/>
-				<button>Next</button>
+					value={name}
+					onChange={handleChange}
+				/>
+				<button disabled={isDisabled}>Next</button>
 			</div>
 		</form>
 	)
