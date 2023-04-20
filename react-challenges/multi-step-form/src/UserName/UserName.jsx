@@ -1,14 +1,20 @@
 import {useForm} from "react-hook-form";
 import "./UserName.css";
 import {useState} from "react";
+import {useNavigate} from "react-router-dom";
 
 export function UserName() {
 	const [ name, setName ] = useState("");
 	const [ isDisabled, setIsDisabled ] = useState(true);
+	const navigate = useNavigate();
 
 	function handleChange(e) {
 		setName(e.target.value);
 		setIsDisabled(!isDisabled);
+	}
+
+	function handleClick() {
+		navigate("/contact");
 	}
 
 	return (
@@ -22,7 +28,10 @@ export function UserName() {
 					value={name}
 					onChange={handleChange}
 				/>
-				<button disabled={isDisabled}>Next</button>
+				<button
+					disabled={isDisabled}
+					onClick={handleClick}
+				>Next</button>
 			</div>
 		</form>
 	)
