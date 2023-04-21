@@ -4,7 +4,7 @@ import {Contact} from "./Contact/Contact";
 import {LandingPage} from "./LandingPage/LandingPage";
 import {Birthday} from "./Birthday/Birthday";
 import { Route, Routes } from "react-router-dom";
-import {Password} from "./Password";
+import {Password} from "./Password/Password";
 
 function App() {
 	return (
