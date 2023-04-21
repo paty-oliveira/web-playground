@@ -26,6 +26,7 @@ export function UserName() {
 					type={"text"}
 					aria-label={"user name"}
 					value={name}
+					required={true}
 					onChange={handleChange}
 				/>
 				<Button

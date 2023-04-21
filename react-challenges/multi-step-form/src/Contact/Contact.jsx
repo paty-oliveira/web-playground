@@ -25,6 +25,7 @@ export function Contact() {
 					type={"email"}
 					aria-label={"user email"}
 					value={email}
+					required={true}
 					onChange={handleChange}
 				/>
 				<Button

@@ -26,6 +26,7 @@ export function Birthday() {
 					type={"date"}
 					value={birthday}
 					min={"1990-01-01"}
+					required={true}
 					onChange={handleChange}
 				/>
 				<Button
