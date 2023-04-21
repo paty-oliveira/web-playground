@@ -1,5 +1,6 @@
 import "./LandingPage.css";
 import {useNavigate} from "react-router-dom";
+import Button from "react-bootstrap/Button";
 
 export function LandingPage() {
 	const navigate = useNavigate();
@@ -11,7 +12,7 @@ export function LandingPage() {
 	return (
 		<div className={"landing-page"}>
 			<h1>Welcome to multi-step form!</h1>
-			<button onClick={handleClick}>Start</button>
+			<Button variant={"primary"} onClick={handleClick}>Start</Button>
 		</div>
 	)
 }

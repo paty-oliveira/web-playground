@@ -1,4 +1,7 @@
 .landing-page {
-    text-align: center;
-    padding: 15rem;
+    display: flex;
+    flex-flow: column;
+    margin: auto;
+    width: max-content;
+    gap: 2rem;
 }
