@@ -1,13 +1,12 @@
-import {render, screen, waitFor} from "@testing-library/react";
+import {act, render, screen, waitFor} from "@testing-library/react";
 import {MemoryRouter} from "react-router-dom";
-import {LandingPage} from "./LandingPage";
 import userEvent from "@testing-library/user-event";
 import App from "../App";
 
 test("When the user opens the app, it should render the Landing page", () => {
 	render(
 		<MemoryRouter initialEntries={['/']}>
-			<LandingPage/>
+			<App/>
 		</MemoryRouter>
 	);
 
@@ -22,12 +21,13 @@ test("When the user opens the app, it should render the Landing page", () => {
 test("When the user clicks in the Start button, it should render the Name form", async () => {
 	render(
 		<MemoryRouter initialEntries={['/']}>
-			<LandingPage/>
+			<App/>
 		</MemoryRouter>
 	);
 
 	const startButton = screen.getByRole("button", { name: /start/i});
-	await userEvent.click(startButton);
+
+	await act(() =>  userEvent.click(startButton));
 
 	const form = screen.getByRole("form", { name: /user name/i});
 	await waitFor(() => expect(form).toBeInTheDocument())
