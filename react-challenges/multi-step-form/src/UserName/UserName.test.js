@@ -1,4 +1,4 @@
-import { render, screen, fireEvent, waitFor } from "@testing-library/react";
+import { act, render, screen, fireEvent, waitFor } from "@testing-library/react";
 import { UserName } from "./UserName";
 import userEvent from "@testing-library/user-event";
 import {MemoryRouter} from "react-router-dom";
@@ -50,16 +50,20 @@ test("the user should not be able to click on Next button when the name field is
 });
 
 
-test("when the user clicks in the next button, it should render the Contact form", async () => {
+test("After the user fill its name, when it clicks on the next button, it should render the Contact form", async () => {
 	render(
-		<MemoryRouter initialEntries={['/']}>
+		<MemoryRouter initialEntries={['/name']}>
 			<App />
 		</MemoryRouter>
 	);
 
+	const nameField = screen.getByRole("textbox", { name: /user name/i});
+	fireEvent.change(nameField, {target: { value: "Paty Oliveira"}});
+
 	const nextButton = screen.getByRole("button", { name: /next/i });
-	await userEvent.click(nextButton);
+	await act(() => userEvent.click(nextButton));
 
 	const form = screen.getByRole("form", { name: /user contact/i});
 	await waitFor(() => expect(form).toBeInTheDocument())
 });
+
