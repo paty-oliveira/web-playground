@@ -7,8 +7,8 @@ import App from "../App";
 
 test("should render the main fields from User name form", function () {
 	render(
-		<MemoryRouter initialEntries={['/']}>
-			<UserName />
+		<MemoryRouter initialEntries={['/name']}>
+			<App />
 		</MemoryRouter>
 	);
 
@@ -24,8 +24,8 @@ test("should render the main fields from User name form", function () {
 
 test("the user should be able to write its name on the textbox", async () => {
 	render(
-		<MemoryRouter initialEntries={['/']}>
-			<UserName />
+		<MemoryRouter initialEntries={['/name']}>
+			<App />
 		</MemoryRouter>
 	);
 
@@ -37,8 +37,8 @@ test("the user should be able to write its name on the textbox", async () => {
 
 test("the user should not be able to click on Next button when the name field is empty", () => {
 	render(
-		<MemoryRouter initialEntries={['/']}>
-			<UserName />
+		<MemoryRouter initialEntries={['/name']}>
+			<App />
 		</MemoryRouter>
 	);
 
