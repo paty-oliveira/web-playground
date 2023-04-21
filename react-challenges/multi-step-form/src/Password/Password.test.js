@@ -60,3 +60,14 @@ test("The Submit button must be active when the password field is fulfilled", as
 	await waitFor(() => expect(submitButton).not.toBeDisabled());
 });
 
+
+//tbc
+test("User name, contact, birthday and password must be available when the user clicks on Submit button", () => {
+
+
+});
+
+//tbd
+test("When the user information submission is successfully, it should render a success message", () => {
+
+})
