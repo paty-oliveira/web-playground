@@ -61,7 +61,7 @@ test( "The user should be able to click on Next button once it has typed its ema
 	expect(nextButton).not.toBeDisabled();
 });
 
-test("After the user fill its name, when it clicks on the next button, it should render the Birthday form", async () => {
+test("After the user fills its name, when it clicks on the next button, it should render the Birthday form", async () => {
 	render(
 		<MemoryRouter initialEntries={["/contact"]}>
 			<App/>

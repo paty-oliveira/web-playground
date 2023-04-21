@@ -4,6 +4,7 @@ import {Contact} from "./Contact/Contact";
 import {LandingPage} from "./LandingPage/LandingPage";
 import {Birthday} from "./Birthday/Birthday";
 import { Route, Routes } from "react-router-dom";
+import {Password} from "./Password";
 
 function App() {
 	return (
@@ -13,6 +14,7 @@ function App() {
 				<Route path={"/name"} element={<UserName/>}/>
 				<Route path={"/contact"} element={<Contact/>}/>
 				<Route path={"/birthday"} element={<Birthday/>}/>
+				<Route path={"/password"} element={<Password/>}/>
 			</Routes>
 		</div>
 	);
