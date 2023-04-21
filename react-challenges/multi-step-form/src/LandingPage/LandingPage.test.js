@@ -10,7 +10,7 @@ test("When the user opens the app, it should render the Landing page", () => {
 		</MemoryRouter>
 	);
 
-	const initialMessage = screen.getByRole("heading", { name: /welcome to multi-step form!/i})
+	const initialMessage = screen.getByRole("heading", { name: /click to start/i})
 	expect(initialMessage).toBeInTheDocument();
 
 	const startButton = screen.getByRole("button", { name: /start/i});

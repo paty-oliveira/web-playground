@@ -11,7 +11,7 @@ export function LandingPage() {
 
 	return (
 		<div className={"landing-page"}>
-			<h1>Welcome to multi-step form!</h1>
+			<h1 className={"animate__animated animate__rubberBand"} >Click to Start</h1>
 			<Button variant={"primary"} onClick={handleClick}>Start</Button>
 		</div>
 	)

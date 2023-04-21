@@ -1,7 +1,7 @@
-import {useForm} from "react-hook-form";
 import "./UserName.css";
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
+import Button from "react-bootstrap/Button";
 
 export function UserName() {
 	const [ name, setName ] = useState("");
@@ -28,10 +28,11 @@ export function UserName() {
 					value={name}
 					onChange={handleChange}
 				/>
-				<button
+				<Button
+					variant={"primary"}
 					disabled={isDisabled}
 					onClick={handleClick}
-				>Next</button>
+				>Next</Button>
 			</div>
 		</form>
 	)
