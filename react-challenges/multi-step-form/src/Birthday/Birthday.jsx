@@ -1,14 +1,15 @@
 import Button from "react-bootstrap/Button";
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
+import {useAppState} from "../state";
 
 export function Birthday() {
-	const [birthday, setBirthday] = useState("");
+	const [state, setState] = useAppState();
 	const [isDisabled, setIsDisabled] = useState(true);
 	const navigate = useNavigate();
 
 	function handleChange(e) {
-		setBirthday(e.target.value);
+		setState({...state, birthday: e.target.value});
 		setIsDisabled(!isDisabled);
 	}
 
@@ -24,7 +25,7 @@ export function Birthday() {
 					id={"user-birthday"}
 					aria-label={"birthday-date"}
 					type={"date"}
-					value={birthday}
+					value={state.birthday}
 					min={"1990-01-01"}
 					required={true}
 					onChange={handleChange}

@@ -1,14 +1,15 @@
 import Button from "react-bootstrap/Button";
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
+import {useAppState} from "../state";
 
 export function Contact() {
+	const [state, setState] = useAppState();
 	const [isDisabled, setIsDisabled] = useState(true);
-	const [email, setEmail] = useState("");
 	const navigate = useNavigate();
 
 	function handleChange(e) {
-		setEmail(e.target.value);
+		setState({...state, email: e.target.value});
 		setIsDisabled(!isDisabled);
 	}
 
@@ -24,7 +25,7 @@ export function Contact() {
 					id={"email"}
 					type={"email"}
 					aria-label={"user email"}
-					value={email}
+					value={state.email}
 					required={true}
 					onChange={handleChange}
 				/>

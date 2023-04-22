@@ -1,6 +1,9 @@
-import {screen, render, fireEvent, waitFor} from "@testing-library/react";
+import {screen, render, fireEvent, waitFor, act} from "@testing-library/react";
 import App from "../App";
 import {MemoryRouter} from "react-router-dom";
+import {Password} from "./Password";
+import {mockComponent} from "react-dom/test-utils";
+import userEvent from "@testing-library/user-event";
 
 test("It should render the main fields from the Password form", () => {
 	render(
@@ -59,15 +62,3 @@ test("The Submit button must be active when the password field is fulfilled", as
 	const submitButton = screen.getByRole("button", { name: /submit/i});
 	await waitFor(() => expect(submitButton).not.toBeDisabled());
 });
-
-
-//tbc
-test("User name, contact, birthday and password must be available when the user clicks on Submit button", () => {
-
-
-});
-
-//tbd
-test("When the user information submission is successfully, it should render a success message", () => {
-
-})

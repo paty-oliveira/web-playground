@@ -1,24 +1,30 @@
 import Button from "react-bootstrap/Button";
 import {useState} from "react";
+import {useAppState} from "../state";
 
 export function Password() {
+	const [state, setState] = useAppState();
 	const [isDisabled, setIsDisabled] = useState(true);
-	const [password, setPassword] = useState("");
 
 	function handleChange(e) {
-		setPassword(e.target.value);
+		setState({...state, password: e.target.value});
 		setIsDisabled(!isDisabled);
 	}
 
+	function handleSubmit(e) {
+		e.preventDefault();
+		console.log(state);
+	}
+
 	return (
-		<form aria-label={"user password"}>
+		<form aria-label={"user password"} onSubmit={handleSubmit}>
 			<div className={"user-information"}>
 				<label htmlFor={"user-password"}>Password</label>
 				<input
 					id={"user-password"}
 					aria-label={"password"}
 					type={"password"}
-					value={password}
+					value={state.password}
 					required={true}
 					onChange={handleChange}
 				/>
