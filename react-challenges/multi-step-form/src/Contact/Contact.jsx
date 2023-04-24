@@ -13,8 +13,12 @@ export function Contact() {
 		setIsDisabled(!isDisabled);
 	}
 
-	function handleClick() {
+	function handleClickNext() {
 		navigate("/birthday");
+	}
+
+	function handleClickBack() {
+		navigate("/name");
 	}
 
 	return (
@@ -29,12 +33,10 @@ export function Contact() {
 					required={true}
 					onChange={handleChange}
 				/>
-				<Button
-					variant={"primary"}
-					disabled={isDisabled}
-					onClick={handleClick}
-				>Next
-				</Button>
+			</div>
+			<div className={"form-buttons"}>
+				<Button variant={"secondary"} onClick={handleClickBack}>Back</Button>
+				<Button variant={"primary"}	disabled={isDisabled} onClick={handleClickNext}>Next</Button>
 			</div>
 		</form>
 	)

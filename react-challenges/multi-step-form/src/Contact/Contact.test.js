@@ -17,7 +17,10 @@ test("It should render the main fields from Contact form", () => {
 	expect(emailField).toBeInTheDocument();
 
 	const nextButton = screen.getByRole("button", { name: /next/i });
-	expect(nextButton).toBeInTheDocument(nextButton);
+	expect(nextButton).toBeInTheDocument();
+
+	const backButton = screen.getByRole("button", { name: /back/i} );
+	expect(backButton).toBeInTheDocument();
 });
 
 test("The user should be able to write its email on the textbox", async() => {
@@ -46,6 +49,23 @@ test("the user should not be able to click on Next button when the email field i
 	const nextButton = screen.getByRole("button", { name: /next/i });
 	expect(nextButton).toBeDisabled();
 });
+
+test("The user should be able to navigate for the previous page by clicking on the Back button", async () => {
+	render(
+		<MemoryRouter initialEntries={["/contact"]}>
+			<App/>
+		</MemoryRouter>
+	);
+
+	const backButton = screen.getByRole("button", { name: /back/i} );
+	await act(() => {
+		userEvent.click(backButton)
+	})
+
+	const userNameForm = screen.getByRole("form", { name: /user name/i} );
+	expect(userNameForm).toBeInTheDocument();
+
+})
 
 test( "The user should be able to click on Next button once it has typed its email ", () => {
 	render(
