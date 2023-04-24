@@ -18,6 +18,9 @@ test("It should render the main fields from the Birthday form", () => {
 
 	const nextButton = screen.getByRole("button", { name: /next/i });
 	expect(nextButton).toBeInTheDocument();
+
+	const backButton = screen.getByRole("button", { name: /back/i} );
+	expect(backButton).toBeInTheDocument();
 });
 
 test("The user should be able to type its birthday according dd/mm/yyy format",  async () => {
@@ -43,7 +46,7 @@ test("The user should not be able to click on Next button while the birthday fie
 	);
 
 	const birthdayField = screen.getByLabelText("birthday-date");
-	await userEvent.type(birthdayField, '');
+	await act(() => userEvent.type(birthdayField, ''));
 
 	const nextButton = screen.getByRole("button", { name: /next/i });
 	expect(nextButton).toBeDisabled();
@@ -64,6 +67,21 @@ test("When the user types its birthday, the user should be able to click on Next
 	expect(nextButton).not.toBeDisabled();
 });
 
+test("The user should be able to navigate for the previous page by clicking on the Back Button", async () => {
+	render(
+		<MemoryRouter initialEntries={["/birthday"]}>
+			<App/>
+		</MemoryRouter>
+	);
+
+	const backButton = screen.getByRole("button", { name: /back/i });
+	await act(() => userEvent.click(backButton));
+
+	const contactForm = screen.getByRole("form", { name: /user contact/i });
+	expect(contactForm).toBeInTheDocument();
+
+})
+
 test("After the user fills its birthday, when it clicks on the next button, it should render the Password form", async () => {
 	render(
 		<MemoryRouter initialEntries={["/birthday"]}>
@@ -73,9 +91,7 @@ test("After the user fills its birthday, when it clicks on the next button, it s
 
 	const birthdayField = screen.getByLabelText("birthday-date");
 
-	await act(() => {
-		userEvent.type(birthdayField, '2023-04-12')
-	});
+	await act(() => userEvent.type(birthdayField, '2023-04-12'));
 
 	const nextButton = screen.getByRole("button", { name: /next/i });
 	await act(() => userEvent.click(nextButton));
