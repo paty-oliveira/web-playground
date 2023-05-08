@@ -10,6 +10,7 @@
 - [Shopping List](react-challenges/shopping-list)
 - [Rolling Dice](react-challenges/rolling-dice)
 - [Multi-Step Form](react-challenges/multi-step-form)
+- [Two-factor Authenticator](react-challenges/two-factor-auth)
 
 ## Javascript Challenges
 
