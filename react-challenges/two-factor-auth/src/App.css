@@ -1,3 +1,27 @@
 .App {
   text-align: center;
+  padding-top: 5rem;
+}
+
+h2 {
+  margin: auto;
+  width: max-content;
+  padding: 1rem;
+}
+
+.two-factor-container {
+  padding: 2rem;
+  margin: auto;
+  width: max-content;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.two-factor-container input {
+  width: 2rem;
+}
+
+.submit-btn {
+  font-weight: bold;
 }
