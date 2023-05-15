@@ -65,7 +65,6 @@ describe("<App />", () => {
 
 	it('When the user presses backspace at the beginning of a box, the cursor should focus on the box field' +
 		'and deletes the input inside',  async function () {
-
 		render(<App />);
 
 		const inputCodeOne = screen.getByLabelText("input-code-0");
@@ -84,5 +83,32 @@ describe("<App />", () => {
 
 		fireEvent.keyDown(inputCodeFour, { key: 'Backspace', code: 8});
 		expect(inputCodeThree).toHaveFocus();
+	});
+
+	it('The submit button should be disabled when the user did not type the entire code', function () {
+		render(<App />);
+
+		const submitButton = screen.getByRole("button", { name: /submit/i});
+		expect(submitButton).toBeDisabled();
+	});
+
+	it('The user should be able to submit the two-factor authenticator code when all the boxes are filled', async function () {
+		render(<App />);
+
+		const submitButton = screen.getByRole("button", { name: /submit/i});
+		const inputCodeOne = screen.getByLabelText("input-code-0");
+		const inputCodeTwo = screen.getByLabelText("input-code-1");
+		const inputCodeThree = screen.getByLabelText("input-code-2");
+		const inputCodeFour = screen.getByLabelText("input-code-3");
+
+		await act(() => userEvent.type(inputCodeOne, "0"));
+
+		await act(() => userEvent.type(inputCodeTwo, "3"));
+
+		await act(() => userEvent.type(inputCodeThree, "7"));
+
+		await act(() => userEvent.type(inputCodeFour, "3"));
+
+		expect(submitButton).not.toBeDisabled();
 	});
 })

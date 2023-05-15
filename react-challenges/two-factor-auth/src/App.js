@@ -4,7 +4,9 @@ import { useRef, useState } from "react";
 
 function App() {
 	const [inputs, setInputs] = useState(["", "", "", ""]);
+	const [isDisabled, setIsDisabled] = useState(true);
 	const inputRefs = useRef([]);
+	const twoFactorCode = inputs.join("");
 
 	const setInputRefs = (index, ref) => {
 		inputRefs.current[index] = ref;
@@ -19,6 +21,10 @@ function App() {
 		if (currentNumber.length === 1 && index < inputRefs.current.length - 1) {
 			inputRefs.current[index + 1].focus();
 		}
+
+		if (twoFactorCode.length === 3 && index === inputRefs.current.length - 1) {
+			setIsDisabled(!isDisabled);
+		}
 	};
 
 	function handleBackspacePress(index, e) {
@@ -27,6 +33,11 @@ function App() {
 		if (e.key === 'Backspace' && index > 0 && currentNumber.length === 0) {
 			inputRefs.current[index - 1].focus();
 		}
+	}
+
+	function handleOnClick(e) {
+		e.preventDefault();
+		console.log(twoFactorCode);
 	}
 
 	return (
@@ -47,7 +58,7 @@ function App() {
 					/>
 				))}
 			</div>
-			<Button variant="success" className="submit-btn">
+			<Button variant="success" className="submit-btn" disabled={isDisabled} onClick={handleOnClick}>
 				Submit
 			</Button>
 		</div>
