@@ -1,4 +1,4 @@
-import { render, screen, act } from '@testing-library/react';
+import {render, screen, act, fireEvent} from '@testing-library/react';
 import App from './App';
 import userEvent from "@testing-library/user-event";
 
@@ -22,7 +22,7 @@ describe("<App />", () => {
 		expect(submitButton).toBeInTheDocument();
 	});
 
-	it('The user should be able only to type digits in the input boxes', async function () {
+	it('The user should be able to only type digits in the input boxes', async function () {
 		render(<App/>);
 
 		const inputCodeOne = screen.getByLabelText("input-code-0");
@@ -61,5 +61,28 @@ describe("<App />", () => {
 
 		await act(() => userEvent.type(inputCodeFour, "4"));
 		expect(inputCodeFour).toHaveFocus();
+	});
+
+	it('When the user presses backspace at the beginning of a box, the cursor should focus on the box field' +
+		'and deletes the input inside',  async function () {
+
+		render(<App />);
+
+		const inputCodeOne = screen.getByLabelText("input-code-0");
+		const inputCodeTwo = screen.getByLabelText("input-code-1");
+		const inputCodeThree = screen.getByLabelText("input-code-2");
+		const inputCodeFour = screen.getByLabelText("input-code-3");
+
+		await act(() => userEvent.type(inputCodeOne, "5"));
+		expect(inputCodeTwo).toHaveFocus();
+
+		await act(() => userEvent.type(inputCodeTwo, "3"));
+		expect(inputCodeThree).toHaveFocus();
+
+		await act(() => userEvent.type(inputCodeThree,"8"));
+		expect(inputCodeFour).toHaveFocus();
+
+		fireEvent.keyDown(inputCodeFour, { key: 'Backspace', code: 8});
+		expect(inputCodeThree).toHaveFocus();
 	});
 })

@@ -21,6 +21,14 @@ function App() {
 		}
 	};
 
+	function handleBackspacePress(index, e) {
+		const currentNumber = e.target.value;
+
+		if (e.key === 'Backspace' && index > 0 && currentNumber.length === 0) {
+			inputRefs.current[index - 1].focus();
+		}
+	}
+
 	return (
 		<div className="App">
 			<h2>Two-Factor Authenticator</h2>
@@ -35,6 +43,7 @@ function App() {
 						max="9"
 						value={value}
 						onChange={(e) => handleInputChange(index, e)}
+						onKeyDown={(e => handleBackspacePress(index, e))}
 					/>
 				))}
 			</div>
