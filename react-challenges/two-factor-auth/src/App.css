@@ -22,6 +22,10 @@ h2 {
   width: 2rem;
 }
 
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
 .submit-btn {
   font-weight: bold;
 }
