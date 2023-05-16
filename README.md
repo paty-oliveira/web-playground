@@ -26,6 +26,8 @@
 - [Count Characters in a String](js-challenges/count-chars)
 - [Reversed Array](js-challenges/reversed-array)
 - [Find the index of the second occurrence of a letter in a string](js-challenges/find-2nth-index)
+- [Get the Average Marks](js-challenges/marks-average)
+
 
 ## CSS Experimentations
 
