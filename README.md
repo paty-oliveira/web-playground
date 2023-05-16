@@ -27,7 +27,7 @@
 - [Reversed Array](js-challenges/reversed-array)
 - [Find the index of the second occurrence of a letter in a string](js-challenges/find-2nth-index)
 - [Get the Average Marks](js-challenges/marks-average)
-
+- [Remove The Smallest Number](js-challenges/remove-smallest-value)
 
 ## CSS Experimentations
 
