@@ -11,6 +11,8 @@
 - [Rolling Dice](react-challenges/rolling-dice)
 - [Multi-Step Form](react-challenges/multi-step-form)
 - [Two-factor Authenticator](react-challenges/two-factor-auth)
+- [Image Carousel](react-challenges/image-carousel)
+
 
 ## Javascript Challenges
 
@@ -29,6 +31,7 @@
 - [Get the Average Marks](js-challenges/marks-average)
 - [Remove The Smallest Number](js-challenges/remove-smallest-value)
 
+
 ## CSS Experimentations
 
 - [Box Model](css-exp/box-model/)
@@ -38,7 +41,7 @@
 - [Grid Layout](css-exp/grid)
 
 
-## Resources
+## External Resources
 
 - [Frontendeval](https://frontendeval.com/)
 - [Codewars](https://www.codewars.com/)
