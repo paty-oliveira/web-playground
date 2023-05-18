@@ -1,6 +1,7 @@
 import './App.css';
 import {useEffect, useState} from "react";
 import {BsArrowLeftShort, BsArrowRightShort} from "react-icons/bs";
+import {getImageUrl} from "./api/api";
 
 function App() {
 
@@ -9,13 +10,8 @@ function App() {
     // mock images
 
     useEffect(() => {
-        fetch("https://www.reddit.com/r/aww/top/.json?t=all")
-            .then((response) => response.json())
-            .then((data) => {
-                console.log(data.data.children)
-                // implement a method to retrieve all the url from *.jpg extension
-                // and then add it to setImages
-            })
+        getImageUrl()
+            .then((data) => console.log(data))
             .catch((err) => console.log(err.message))
     }, []);
 
