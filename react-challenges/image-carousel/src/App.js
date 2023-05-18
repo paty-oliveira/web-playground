@@ -1,5 +1,5 @@
 import './App.css';
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {BsArrowLeftShort, BsArrowRightShort} from "react-icons/bs";
 
 function App() {
@@ -7,6 +7,17 @@ function App() {
     const [index, setIndex] = useState(0);
     const images = ["https://i.redd.it/sg3q5cuedod31.jpg", "https://i.redd.it/naba9ilyvgj81.jpg", "https://i.redd.it/1ubakwq1jr741.jpg"]
     // mock images
+
+    useEffect(() => {
+        fetch("https://www.reddit.com/r/aww/top/.json?t=all")
+            .then((response) => response.json())
+            .then((data) => {
+                console.log(data.data.children)
+                // implement a method to retrieve all the url from *.jpg extension
+                // and then add it to setImages
+            })
+            .catch((err) => console.log(err.message))
+    }, []);
 
     function handleNextClick() {
         const newIndex = index + 1;

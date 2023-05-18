@@ -32,10 +32,6 @@ h2 {
   cursor: pointer;
 }
 
-/*.arrow-button:disabled {*/
-/*  color: #282c34;*/
-/*}*/
-
 .arrow-button {
   font-size: 3rem;
 }
