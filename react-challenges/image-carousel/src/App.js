@@ -23,10 +23,10 @@ function App() {
         <h2>Most Popular Images from Reddit</h2>
         <div className="carousel-container">
             <div className="carousel-buttons-container">
-                <button onClick={handlePreviousClick} className="carousel-buttons">
+                <button onClick={handlePreviousClick} className="carousel-buttons" aria-label="previous-btn">
                     <BsArrowLeftShort className="arrow-button"/>
                 </button>
-                <button onClick={handleNextClick} className="carousel-buttons">
+                <button onClick={handleNextClick} className="carousel-buttons" aria-label="next-btn">
                     <BsArrowRightShort className="arrow-button"/>
                 </button>
             </div>

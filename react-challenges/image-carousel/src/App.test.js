@@ -8,13 +8,17 @@ describe("<App />", () => {
 		const header = screen.getByRole("heading", { name: /most popular images from reddit/i })
 		expect(header).toBeInTheDocument();
 
-		const previousButton = screen.getByRole("button", { name: /previous/i});
+		const previousButton = screen.getByLabelText("previous-btn");
 		expect(previousButton).toBeInTheDocument();
 
-		const nextButton = screen.getByRole("button", { name: /next/i });
+		const nextButton = screen.getByLabelText("next-btn");
 		expect(nextButton).toBeInTheDocument();
 
 		const redditImages = screen.getByLabelText("images-reddit");
 		expect(redditImages).toBeInTheDocument();
+	});
+
+	it('should ', function () {
+
 	});
 })
