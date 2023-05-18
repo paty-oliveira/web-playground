@@ -2,13 +2,11 @@
   text-align: center;
 }
 
-.carousel-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 0.25rem;
+h2 {
+  padding: 2.5rem;
 }
 
-.carousel-images {
+.carousel-container{
   width: 20%;
   height: auto;
   margin: auto;
@@ -17,7 +15,28 @@
   gap: 2rem;
 }
 
-img {
+.carousel-buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.reddit-img {
   max-width: 100%;
   border-radius: 5px;
 }
+
+.carousel-buttons {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/*.arrow-button:disabled {*/
+/*  color: #282c34;*/
+/*}*/
+
+.arrow-button {
+  font-size: 3rem;
+}
+

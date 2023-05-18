@@ -1,5 +1,6 @@
 import './App.css';
 import {useState} from "react";
+import {BsArrowLeftShort, BsArrowRightShort} from "react-icons/bs";
 
 function App() {
 
@@ -20,12 +21,21 @@ function App() {
     return (
     <div className="App">
         <h2>Most Popular Images from Reddit</h2>
-        <div className="carousel-images">
-            <div className={"carousel-buttons"}>
-                <button onClick={handlePreviousClick}>Previous</button>
-                <button onClick={handleNextClick}>Next</button>
+        <div className="carousel-container">
+            <div className="carousel-buttons-container">
+                <button onClick={handlePreviousClick} className="carousel-buttons">
+                    <BsArrowLeftShort className="arrow-button"/>
+                </button>
+                <button onClick={handleNextClick} className="carousel-buttons">
+                    <BsArrowRightShort className="arrow-button"/>
+                </button>
             </div>
-            <img src={images[index]} alt={"most-popular-reddit-images"} aria-label={"images-reddit"}/>
+            <img
+                src={images[index]}
+                alt="most-popular-reddit-images"
+                aria-label="images-reddit"
+                className="reddit-img"
+            />
         </div>
     </div>
     );
