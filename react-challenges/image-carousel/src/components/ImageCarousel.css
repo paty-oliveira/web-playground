@@ -1,0 +1,29 @@
+.carousel-container{
+    width: 20%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.carousel-buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 0.25rem;
+}
+
+.reddit-img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.carousel-buttons {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.arrow-button {
+    font-size: 3rem;
+}
