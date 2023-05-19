@@ -1,17 +1,16 @@
 import './App.css';
 import {useEffect, useState} from "react";
 import {BsArrowLeftShort, BsArrowRightShort} from "react-icons/bs";
-import {getImageUrl} from "./api/api";
+import {getMostPopularImagesFromReddit} from "./api/api";
 
 function App() {
 
     const [index, setIndex] = useState(0);
-    const images = ["https://i.redd.it/sg3q5cuedod31.jpg", "https://i.redd.it/naba9ilyvgj81.jpg", "https://i.redd.it/1ubakwq1jr741.jpg"]
-    // mock images
+    const [images, setImages] = useState([""]);
 
     useEffect(() => {
-        getImageUrl()
-            .then((data) => console.log(data))
+        getMostPopularImagesFromReddit()
+            .then((data) => setImages(data))
             .catch((err) => console.log(err.message))
     }, []);
 
