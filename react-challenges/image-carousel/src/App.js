@@ -2,15 +2,20 @@ import './App.css';
 import {useEffect, useState} from "react";
 import {BsArrowLeftShort, BsArrowRightShort} from "react-icons/bs";
 import {getMostPopularImagesFromReddit} from "./api/api";
+import {ThreeDots} from "react-loader-spinner";
 
 function App() {
 
     const [index, setIndex] = useState(0);
     const [images, setImages] = useState([""]);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         getMostPopularImagesFromReddit()
-            .then((data) => setImages(data))
+            .then((data) => {
+                setImages(data);
+                setIsLoading(!isLoading);
+            })
             .catch((err) => console.log(err.message))
     }, []);
 
@@ -22,6 +27,14 @@ function App() {
     function handlePreviousClick() {
         const newIndex = index - 1;
         setIndex(newIndex < 0 ? index: newIndex);
+    }
+
+    if (isLoading) {
+        return (
+            <div className="loading-container">
+                <ThreeDots color="black" ariaLabel={"loading-spinner"}/>
+            </div>
+        )
     }
 
     return (

@@ -36,3 +36,11 @@ h2 {
   font-size: 3rem;
 }
 
+.loading-container {
+  width: max-content;
+  margin: auto;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
