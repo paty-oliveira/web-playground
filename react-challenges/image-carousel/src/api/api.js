@@ -1,12 +1,27 @@
 
-export async function getAllRedditPosts() {
-	const response = await fetch("https://www.reddit.com/r/aww/top/.json?t=all");
-	if (response.status === 200) {
-		return await response.json();
+export async function getMostPopularImagesFromReddit() {
+	try {
+		const response = await fetch("https://www.reddit.com/r/aww/top/.json?t=all");
+		const payload =  await response.json();
+
+		return extractImageUrl(payload);
+
+	} catch (error){
+		throw new Error("Invalid response" + error);
 	}
-	throw new Error("Invalid response");
 }
 
-export async function getImageUrl() {
-	return await getAllRedditPosts();
+export function extractImageUrl(payload) {
+	const imagesUrl = [];
+	const postsMetadata = payload.data.children;
+
+	postsMetadata.forEach((post) => {
+		let url = post.data.url_overridden_by_dest;
+
+		if (url.includes(".jpg")) {
+			imagesUrl.push(url)
+		}
+	})
+
+	return imagesUrl
 }

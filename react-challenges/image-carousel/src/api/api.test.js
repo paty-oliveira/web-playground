@@ -1,10 +1,9 @@
-import {getImageUrl, getAllRedditPosts} from "./api";
+import {extractImageUrl} from "./api";
 
-jest.mock('./api');
 
 describe('Testing API calls', () => {
 	it('should return a list of objects coming from Reddit posts', function async () {
-		const mockData = {
+		const payload = {
 			kind: "Listing",
 			data: {
 				after: "t3_b1rycu",
@@ -32,6 +31,10 @@ describe('Testing API calls', () => {
 				]
 			}
 		}
-		getAllRedditPosts.mockResolvedValue(mockData)
+
+		const actualResult = extractImageUrl(payload);
+		const expectedResult = ["https://i.redd.it/fj8vqooc8nd51.jpg", "https://i.redd.it/nbf6kvcbwm741.jpg"];
+
+		expect(actualResult).toEqual(expectedResult);
 	});
 })
