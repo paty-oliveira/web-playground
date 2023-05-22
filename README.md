@@ -31,6 +31,8 @@
 - [Get the Average Marks](js-challenges/marks-average)
 - [Remove The Smallest Number](js-challenges/remove-smallest-value)
 - [Sum all Positive Values](js-challenges/sum-positive)
+- [Remove Consecutive Duplicate Words](js-challenges/remove-duplicates)
+
 
 ## CSS Experimentations
 
