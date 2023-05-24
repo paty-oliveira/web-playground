@@ -33,6 +33,7 @@
 - [Sum all Positive Values](js-challenges/sum-positive)
 - [Remove Consecutive Duplicate Words](js-challenges/remove-duplicates)
 - [Remove All the Marked Elements of a List](js-challenges/remove-element-list)
+- [Playing with Sets - Subset and Superset](js-challenges/subset-superset)
 
 
 ## CSS Experimentations
