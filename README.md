@@ -12,6 +12,7 @@
 - [Multi-Step Form](react-challenges/multi-step-form)
 - [Two-factor Authenticator](react-challenges/two-factor-auth)
 - [Image Carousel](react-challenges/image-carousel)
+- [Data Fetching and Visualization](react-challenges/data-viz)
 
 
 ## Javascript Challenges
