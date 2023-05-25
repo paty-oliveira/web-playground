@@ -14,7 +14,6 @@ function App() {
 
     return (
     <div className="App">
-      <h2>Simple Histogram Showing Number Frequency</h2>
         <Plot
             data={[
                 {
