@@ -1,16 +1,24 @@
 import './App.css';
-import {dataPoints} from "./mocks/mockDataPoints";
 import Plot from 'react-plotly.js';
+import {getRandomNumbers} from "./api";
+import {useEffect, useState} from "react";
 
 function App() {
+    const [numbers, setNumbers] = useState([]);
 
-  return (
+    useEffect(() => {
+        getRandomNumbers()
+            .then(data => setNumbers(data))
+            .catch(error => console.log(error.message))
+    }, [])
+
+    return (
     <div className="App">
       <h2>Simple Histogram Showing Number Frequency</h2>
         <Plot
             data={[
                 {
-                    x: dataPoints,
+                    x: numbers,
                     type: 'histogram',
                     opacity: 0.6,
                     marker: {
@@ -22,7 +30,7 @@ function App() {
         />
 
     </div>
-  );
+    );
 }
 
 export default App;
