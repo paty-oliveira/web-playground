@@ -1,0 +1,49 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.title {
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.sub-title {
+    padding: 0.75rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    border-bottom: solid black 1px;
+}
+
+.container {
+    margin: auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 0.5rem;
+    justify-items: center;
+}
+
+.column {
+    border: solid black;
+    border-radius: 0.5rem;
+    width: 70%;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    gap: 1rem;
+    margin: 0;
+}
+
+.task {
+    border: solid;
+    border-radius: 0.3rem;
+    padding: 1rem;
+    cursor: move;
+}
+
+.invisible-task {
+    display: none;
+}

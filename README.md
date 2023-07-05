@@ -37,6 +37,9 @@
 - [Playing with Sets - Subset and Superset](js-challenges/subset-superset)
 - [Credit Card Masking](js-challenges/credit-card-masking)
 
+## Node.js Challenges
+
+- [Simple Tasks Board](node-js-challenges/tasks-board)
 
 ## CSS Experimentations
 
@@ -45,7 +48,6 @@
 - [Pseudo-classes](css-exp/pseudo-classes)
 - [Flexbox](css-exp/flexbox)
 - [Grid Layout](css-exp/grid)
-
 
 ## External Resources
 
