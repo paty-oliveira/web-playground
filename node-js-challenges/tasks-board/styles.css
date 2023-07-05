@@ -2,6 +2,13 @@
     font-family: 'Courier New', Courier, monospace;
 }
 
+body {
+    background-image: radial-gradient(
+        #ffcfd2,
+        #f07167
+      )
+}
+
 .title {
     text-align: center;
     padding-top: 2rem;
