@@ -2,16 +2,10 @@
     font-family: 'Courier New', Courier, monospace;
 }
 
-body {
-    background-image: radial-gradient(
-        #ffcfd2,
-        #f07167
-      )
-}
-
 .title {
     text-align: center;
     padding-top: 2rem;
+    color: #f07167;
 }
 
 .sub-title {
@@ -20,9 +14,44 @@ body {
     display: flex;
     justify-content: center;
     border-bottom: solid black 1px;
+    color: #f07167;
 }
 
-.container {
+.form-container {
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+}
+
+form {
+    display: inline-flex;
+    gap: 0.5rem;
+}
+
+.task-input {
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    width: 100%;
+    background-color: #ffcfd2, ;
+}
+
+.add-btn {
+    padding: 1rem;
+    width: fit-content;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #f07167;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    opacity: 0.7;
+}
+
+.board-container {
     margin: auto;
     padding: 2rem;
     display: grid;
