@@ -10,22 +10,22 @@
     <main>
       <h1 class="title">Simple Board Tasks</h1>
       <section class="form-container">
-        <form>
+        <form class="input-form">
           <input
-            class="task-input"
+            id="task-input"
             type="text"
             name="task-description"
             placeholder="Task Description"
           />
-          <button class="add-btn">Add</button>
+          <button id="add-btn">Add</button>
         </form>
       </section>
       <section class="board-container">
         <section class="column">
           <h2 class="sub-title">All Tasks &#128467;</h2>
-          <div draggable="true" class="task">task 1</div>
-          <div draggable="true" class="task">task 1</div>
-          <div draggable="true" class="task">task 1</div>
+          <template>
+              <div draggable="true" class="task"></div>
+          </template>
         </section>
         <section class="column">
           <h2 class="sub-title">In Progress &#128679;</h2>

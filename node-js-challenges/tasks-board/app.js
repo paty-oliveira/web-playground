@@ -43,3 +43,15 @@ columns.forEach((column) => {
   column.addEventListener("dragleave", dragLeave);
   column.addEventListener("drop", dragDrop);
 });
+
+
+function handleOnClick(e) {
+  e.preventDefault();
+  const inputField = document.getElementById("task-input");
+  const taskDescription = inputField.value;
+  inputField.value = ''
+  console.log(taskDescription);
+}
+
+const addButton = document.getElementById("add-btn");
+addButton.addEventListener('click', handleOnClick);
