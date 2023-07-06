@@ -21,11 +21,9 @@
         </form>
       </section>
       <section class="board-container">
-        <section class="column">
+        <section class="column" id="first-column">
           <h2 class="sub-title">All Tasks &#128467;</h2>
-          <template>
-              <div draggable="true" class="task"></div>
-          </template>
+
         </section>
         <section class="column">
           <h2 class="sub-title">In Progress &#128679;</h2>
@@ -34,6 +32,9 @@
           <h2 class="sub-title">Done &#9989;</h2>
         </section>
       </section>
+      <template id="task-template">
+        <div draggable="true" class="task" id="task"></div>
+    </template>
     </main>
   </body>
   <script src="app.js" defer></script>

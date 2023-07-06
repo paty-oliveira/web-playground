@@ -49,7 +49,11 @@ function handleOnClick(e) {
   e.preventDefault();
   const inputField = document.getElementById("task-input");
   const taskDescription = inputField.value;
-  inputField.value = ''
+  inputField.value = '';
+  const template = document.getElementById("task-template");
+  const taskContainer = document.getElementById("first-column");
+  const clone = template.content.cloneNode(true);
+  taskContainer.appendChild(clone);
   console.log(taskDescription);
 }
 
