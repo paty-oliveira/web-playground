@@ -37,6 +37,11 @@
 - [Playing with Sets - Subset and Superset](js-challenges/subset-superset)
 - [Credit Card Masking](js-challenges/credit-card-masking)
 
+## Typescript Challenges
+
+- [Find Multiples of a number](ts-challenges/multiples-numbers)
+
+
 ## Node.js Challenges
 
 - [Simple Tasks Board](node-js-challenges/tasks-board)
