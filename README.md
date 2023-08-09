@@ -40,6 +40,7 @@
 ## Typescript Challenges
 
 - [Find Multiples of a number](ts-challenges/multiples-numbers)
+- [Vowel Count](ts-challenges/vowel-count)
 
 
 ## Node.js Challenges
