@@ -41,7 +41,8 @@
 
 - [Find Multiples of a number](ts-challenges/multiples-numbers)
 - [Vowel Count](ts-challenges/vowel-count)
-
+- [Square Every Digits](ts-challenges/square-all-digits)
+- [Number of People in the Bus](ts-challenges/people-in-bus)
 
 ## Node.js Challenges
 
