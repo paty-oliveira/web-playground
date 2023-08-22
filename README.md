@@ -44,6 +44,8 @@
 - [Square Every Digits](ts-challenges/square-all-digits)
 - [Number of People in the Bus](ts-challenges/people-in-bus)
 - [Capitalize Words](ts-challenges/capitalize-words)
+- [Shortest Word](ts-challenges/shortest-word)
+
 
 ## Node.js Challenges
 
