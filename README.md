@@ -45,7 +45,7 @@
 - [Number of People in the Bus](ts-challenges/people-in-bus)
 - [Capitalize Words](ts-challenges/capitalize-words)
 - [Shortest Word](ts-challenges/shortest-word)
-
+- [Find the Capitals](ts-challenges/find-capitals)
 
 ## Node.js Challenges
 
