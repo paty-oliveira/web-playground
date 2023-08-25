@@ -36,6 +36,7 @@
 - [Remove All the Marked Elements of a List](js-challenges/remove-element-list)
 - [Playing with Sets - Subset and Superset](js-challenges/subset-superset)
 - [Credit Card Masking](js-challenges/credit-card-masking)
+- [Convert Number to Ascii representation](js-challenges/convert-number)
 
 ## Typescript Challenges
 
