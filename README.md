@@ -47,6 +47,7 @@
 - [Capitalize Words](ts-challenges/capitalize-words)
 - [Shortest Word](ts-challenges/shortest-word)
 - [Find the Capitals](ts-challenges/find-capitals)
+- [Sum of two lowest positive integers](ts-challenges/sum-positives)
 
 ## Node.js Challenges
 
