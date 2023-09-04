@@ -48,6 +48,7 @@
 - [Shortest Word](ts-challenges/shortest-word)
 - [Find the Capitals](ts-challenges/find-capitals)
 - [Sum of two lowest positive integers](ts-challenges/sum-positives)
+- [Counting Sheep](ts-challenges/counting-sheep)
 
 ## Node.js Challenges
 
