@@ -1,6 +1,6 @@
 # Web Development Playground
 
-## React Challenges
+## React
 
 - [FAQ component](react-challenges/faq-component)
 - [Countdown Timer](react-challenges/countdown-timer)
@@ -14,8 +14,17 @@
 - [Image Carousel](react-challenges/image-carousel)
 - [Data Fetching and Visualization](react-challenges/data-viz)
 
+## CSS
 
-## Javascript Challenges
+- [Box Model](css-challenges/box-model/)
+- [Pseudo-elements](css-challenges/pseudo-elements/)
+- [Pseudo-classes](css-challenges/pseudo-classes)
+- [Flexbox](css-challenges/flexbox)
+- [Grid Layout](css-challenges/grid)
+- [Product Page](css-challenges/product-page)
+- [Hire Us Page](css-challenges/hire-us-page/)
+
+## Javascript
 
 - [My own version of map](js-challenges/my-own-map)
 - [Average of Orders for every weekday](js-challenges/orders-avg)
@@ -37,8 +46,9 @@
 - [Playing with Sets - Subset and Superset](js-challenges/subset-superset)
 - [Credit Card Masking](js-challenges/credit-card-masking)
 - [Convert Number to Ascii representation](js-challenges/convert-number)
+- [Simple Tasks Board](node-js-challenges/tasks-board)
 
-## Typescript Challenges
+## Typescript
 
 - [Find Multiples of a number](ts-challenges/multiples-numbers)
 - [Vowel Count](ts-challenges/vowel-count)
@@ -50,20 +60,8 @@
 - [Sum of two lowest positive integers](ts-challenges/sum-positives)
 - [Counting Sheep](ts-challenges/counting-sheep)
 
-## Node.js Challenges
-
-- [Simple Tasks Board](node-js-challenges/tasks-board)
-
-## CSS Challenges
-
-- [Box Model](css-challenges/box-model/)
-- [Pseudo-elements](css-challenges/pseudo-elements/)
-- [Pseudo-classes](css-challenges/pseudo-classes)
-- [Flexbox](css-challenges/flexbox)
-- [Grid Layout](css-challenges/grid)
-- [Product Page](css-challenges/product-page)
-
 ## External Resources
 
 - [Frontendeval](https://frontendeval.com/)
 - [Codewars](https://www.codewars.com/)
+- [CSS Demystified Course by Kevin Powell](https://cssdemystified.com/#!)
