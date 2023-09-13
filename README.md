@@ -54,13 +54,14 @@
 
 - [Simple Tasks Board](node-js-challenges/tasks-board)
 
-## CSS Experimentations
+## CSS Challenges
 
-- [Box Model](css-exp/box-model/)
-- [Pseudo-elements](css-exp/pseudo-elements/)
-- [Pseudo-classes](css-exp/pseudo-classes)
-- [Flexbox](css-exp/flexbox)
-- [Grid Layout](css-exp/grid)
+- [Box Model](css-challenges/box-model/)
+- [Pseudo-elements](css-challenges/pseudo-elements/)
+- [Pseudo-classes](css-challenges/pseudo-classes)
+- [Flexbox](css-challenges/flexbox)
+- [Grid Layout](css-challenges/grid)
+- [Product Page](css-challenges/product-page)
 
 ## External Resources
 

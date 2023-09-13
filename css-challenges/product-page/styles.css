@@ -1,0 +1,104 @@
+:root {
+  --clr-red: rgba(232, 139, 139);
+  --clr-blue: rgba(96, 168, 235);
+  --clr-pink: rgba(223, 135, 204);
+  --clr-orange: rgba(235, 143, 96);
+  --clr-purple: rgba(139, 146, 232);
+  --clr-green: rgba(81, 188, 157);
+  --clr-white: rgba(255, 255, 255);
+  --clr-neutral-400: rgba(94, 94, 94);
+  --clr-neutral-300: rgba(240, 242, 244);
+  --fs-title: 3rem;
+  --fs-base: 1rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Red Hat Text", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.container h1 {
+  font-size: var(--fs-title);
+  color: var(--clr-neutral-400);
+}
+
+.subtitle {
+  margin: auto;
+  width: 30%;
+  color: #5e5e5e;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 3rem;
+  gap: 3rem;
+}
+
+.card {
+  background-color: var(--clr-neutral-300);
+  color: var(--clr-neutral-400);
+  border-radius: 1rem;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0);
+}
+
+.card h2 {
+  color: var(--clr-white);
+  font-size: var(--fs-base);
+  text-transform: uppercase;
+  margin: 0;
+  padding: 12px;
+  width: min-content;
+  border-radius: 1rem;
+  position: relative;
+  top: -10%;
+}
+
+.card p {
+  padding: 1rem;
+}
+
+.card:nth-child(1) > h2 {
+  background-color: var(--clr-green);
+}
+
+.card:nth-child(2) > h2 {
+  background-color: var(--clr-purple);
+}
+
+.card:nth-child(3) > h2 {
+  background-color: var(--clr-orange);
+}
+
+.card:nth-child(4) > h2 {
+  background-color: var(--clr-pink);
+}
+
+.card:nth-child(5) > h2 {
+  background-color: var(--clr-blue);
+}
+
+.card:nth-child(6) > h2 {
+  background-color: var(--clr-red);
+}
