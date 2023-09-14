@@ -23,6 +23,7 @@
 - [Grid Layout](css-challenges/grid)
 - [Product Page](css-challenges/product-page)
 - [Hire Us Page](css-challenges/hire-us-page/)
+- [Cards Page](css-challenges/cards-page/)
 
 ## Javascript
 
