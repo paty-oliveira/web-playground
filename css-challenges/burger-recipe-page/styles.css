@@ -1,0 +1,48 @@
+:root {
+  --clr-neutral-100: #fff;
+  --clr-neutral-900: #030303;
+  --clr-primary-400: #ff3369;
+
+  --ff-heading: "Baloo 2";
+  --ff-main: "Inter";
+
+  --fs-title: 4.25rem;
+  --fs-heading: 2.123rem;
+  --fs-description: 1.5rem;
+  --fs--body: 1.063rem;
+  --fs-link: 0.813rem;
+}
+
+/* Resetting */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul[class] {
+  list-style: none;
+}
+
+/* Section */
+
+header {
+  font-family: var(--ff-heading);
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 3rem;
+  padding: 1rem;
+  text-transform: uppercase;
+}
+
+/* Utility Classes */
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
