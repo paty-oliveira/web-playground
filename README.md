@@ -24,6 +24,7 @@
 - [Product Page](css-challenges/product-page)
 - [Hire Us Page](css-challenges/hire-us-page/)
 - [Cards Page](css-challenges/cards-page/)
+- [Burger Recipe Page](css-challenges/burger-recipe-page)
 
 ## Javascript
 
