@@ -29,6 +29,15 @@ ul[class] {
   list-style: none;
 }
 
+ol {
+  list-style-position: inside;
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-neutral-900);
+}
+
 body {
   font-family: var(--ff-main);
 }
@@ -48,7 +57,7 @@ header {
   background-color: var(--clr-neutral-100);
 }
 
-.home {
+#home {
   font-family: var(--ff-heading);
   background-image: url("./assets/hero.jpg");
   background-size: cover;
@@ -56,7 +65,7 @@ header {
   padding: var(--padding-section);
 }
 
-.about {
+#about {
   padding: var(--padding-section);
   background-color: var(--clr-primary-400);
   color: var(--clr-neutral-100);
@@ -64,8 +73,26 @@ header {
   line-height: 2em;
 }
 
-.about p {
+#about p {
   width: 75%;
+}
+
+#recipes {
+  background-color: beige;
+  padding: 2.5rem;
+}
+
+.recipe {
+  padding: 3rem;
+  border-radius: 1rem;
+  transform: translateY(-5.5rem);
+}
+
+.steps h3 {
+  font-family: var(--ff-heading);
+  font-size: var(--fs-subtitle);
+  font-weight: bolder;
+  color: var(--clr-primary-400);
 }
 
 /* Subclasses */
@@ -85,4 +112,8 @@ header {
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+
+.bg-light {
+  background-color: var(--clr-neutral-100);
 }
