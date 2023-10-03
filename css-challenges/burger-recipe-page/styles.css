@@ -7,10 +7,12 @@
   --ff-main: "Inter";
 
   --fs-title: 4.25rem;
-  --fs-heading: 2.123rem;
+  --fs-subtitle: 2.125rem;
   --fs-description: 1.5rem;
   --fs--body: 1.063rem;
   --fs-link: 0.813rem;
+
+  --padding-section: 6rem;
 }
 
 /* Resetting */
@@ -27,6 +29,10 @@ ul[class] {
   list-style: none;
 }
 
+body {
+  font-family: var(--ff-main);
+}
+
 /* Section */
 
 header {
@@ -34,9 +40,43 @@ header {
   font-weight: bold;
   display: flex;
   justify-content: space-between;
-  margin: 0 3rem;
-  padding: 1rem;
+  padding: 1rem 3rem;
   text-transform: uppercase;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--clr-neutral-100);
+}
+
+.home {
+  font-family: var(--ff-heading);
+  background-image: url("./assets/hero.jpg");
+  background-size: cover;
+  color: var(--clr-neutral-100);
+  padding: var(--padding-section);
+}
+
+.about {
+  padding: var(--padding-section);
+  background-color: var(--clr-primary-400);
+  color: var(--clr-neutral-100);
+  font-size: var(--fs-description);
+  line-height: 2em;
+}
+
+.about p {
+  width: 75%;
+}
+
+/* Subclasses */
+
+.title {
+  font-size: var(--fs-title);
+  font-weight: bolder;
+}
+
+.subtitle {
+  font-size: var(--fs-subtitle);
 }
 
 /* Utility Classes */
