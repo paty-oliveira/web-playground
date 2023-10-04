@@ -2,6 +2,7 @@
   --clr-neutral-100: #fff;
   --clr-neutral-900: #030303;
   --clr-primary-400: #ff3369;
+  --clr-border: #eef1f6;
 
   --ff-heading: "Baloo 2";
   --ff-main: "Inter";
@@ -29,7 +30,8 @@ ul[class] {
   list-style: none;
 }
 
-ol {
+ol,
+ul {
   list-style-position: inside;
 }
 
@@ -83,16 +85,36 @@ header {
 }
 
 .recipe {
+  font-size: var(--fs--body);
+  line-height: 2rem;
   padding: 3rem;
   border-radius: 1rem;
   transform: translateY(-5.5rem);
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
 }
 
-.steps h3 {
-  font-family: var(--ff-heading);
-  font-size: var(--fs-subtitle);
-  font-weight: bolder;
-  color: var(--clr-primary-400);
+.steps,
+.ingredients {
+  width: 40%;
+}
+
+.step li {
+  margin-bottom: 1em;
+}
+
+.step li:last-of-type {
+  margin-bottom: 4rem;
+}
+
+.step:last-child li:last-of-type {
+  margin-bottom: 0;
+}
+
+.steps {
+  border-right: solid var(--clr-border);
+  padding-right: 5rem;
 }
 
 /* Subclasses */
@@ -104,6 +126,14 @@ header {
 
 .subtitle {
   font-size: var(--fs-subtitle);
+}
+
+.recipe-subtitle {
+  font-family: var(--ff-heading);
+  font-size: var(--fs-subtitle);
+  font-weight: bolder;
+  color: var(--clr-primary-400);
+  margin-bottom: 2rem;
 }
 
 /* Utility Classes */
