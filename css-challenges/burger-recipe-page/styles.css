@@ -3,6 +3,7 @@
   --clr-neutral-900: #030303;
   --clr-primary-400: #ff3369;
   --clr-border: #eef1f6;
+  --clr-bg: beige;
 
   --ff-heading: "Baloo 2";
   --ff-main: "Inter";
@@ -56,21 +57,17 @@ header {
   position: sticky;
   top: 0;
   z-index: 10;
-  background-color: var(--clr-neutral-100);
 }
 
 #home {
   font-family: var(--ff-heading);
   background-image: url("./assets/hero.jpg");
   background-size: cover;
-  color: var(--clr-neutral-100);
   padding: var(--padding-section);
 }
 
 #about {
   padding: var(--padding-section);
-  background-color: var(--clr-primary-400);
-  color: var(--clr-neutral-100);
   font-size: var(--fs-description);
   line-height: 2em;
 }
@@ -80,8 +77,8 @@ header {
 }
 
 #recipes {
-  background-color: beige;
-  padding: 2.5rem;
+  background-color: var(--clr-bg);
+  padding: 2.5rem 2.5rem 0 2.5rem;
 }
 
 .recipe {
@@ -117,6 +114,14 @@ header {
   padding-right: 5rem;
 }
 
+#source {
+  font-size: var(--fs-link);
+  padding: 1.5rem;
+  transform: translateY(-6rem);
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
 /* Subclasses */
 
 .title {
@@ -146,4 +151,12 @@ header {
 
 .bg-light {
   background-color: var(--clr-neutral-100);
+}
+
+.bg-pink {
+  background-color: var(--clr-primary-400);
+}
+
+.light {
+  color: var(--clr-neutral-100);
 }
