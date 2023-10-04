@@ -29,6 +29,10 @@ button {
 
 /* Sections */
 
+main {
+  display: flex;
+}
+
 .login-form {
   display: flex;
   flex-direction: column;
@@ -96,7 +100,11 @@ input {
   text-align: center;
 }
 
-@media (max-width: 350px) {
+@media (max-width: 380px) {
+  .background {
+    display: none;
+  }
+
   .login-form {
     padding: 3rem 1rem;
   }
