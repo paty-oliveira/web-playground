@@ -4,7 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;800&display=swap"
+      rel="stylesheet"
+    />
     <title>Login</title>
   </head>
-  <body></body>
+  <body>
+    <section class="login-form">
+      <h1 class="title">Create your future</h1>
+      <form>
+        <label for="name">Your Name</label>
+        <input type="text" id="name" placeholder="Sylvester Stallone" />
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="example@domain.com" />
+        <label for="password">Password</label>
+        <input type="password" id="password" />
+        <label for="confirm-password">Confirm password</label>
+        <input type="password" id="confirm-password" />
+      </form>
+      <img class="recaptcha" src="./assets/recaptcha.png" alt="recaptcha" />
+      <button class="btn-account">Create an account</button>
+      <p class="license">
+        By clicking 'Create an account' you agree to
+        <a href="SlyArchitectureAndFuture.com" target="_blank">User License</a>
+        and
+        <a href="SlyArchitectureAndFuture.com" target="_blank"
+          >Privacy Policy</a
+        >
+      </p>
+      <p class="continue-with">or continue with</p>
+      <div class="third-party-login">
+        <img src="./assets/apple.png" alt="apple-login" />
+        <img src="./assets/facebook.png" alt="facebook-login" />
+        <img src="./assets/github.png" alt="github-login" />
+      </div>
+      <p>Already have an account? <a href="" target="_blank">Login</a></p>
+    </section>
+  </body>
 </html>

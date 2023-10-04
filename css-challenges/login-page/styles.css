@@ -1,0 +1,107 @@
+:root {
+  --clr-neutral-100: #fff;
+  --clr-neutral-300: #a9afbc;
+  --clr-neutral-400: #737b8c;
+  --clr-neutral-900: #020203;
+
+  --fs-title: 1.375rem;
+  --fs-form-label-text: 0.75rem;
+  --fs-form-placeholder: 1rem;
+  --fs-btn: 1.25rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body,
+button {
+  font-family: "Poppins", sans-serif;
+  font-size: var(--fs-form-label-text);
+}
+
+/* Sections */
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+}
+
+/* Classes */
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  font-size: var(--fs-form-placeholder);
+  color: var(--clr-neutral-300);
+  padding: 0.25rem 0.5rem;
+  margin-bottom: 1rem;
+  border: solid var(--clr-neutral-300) 1px;
+  border-radius: 5px;
+}
+
+.title {
+  font-size: var(--fs-title);
+  margin-bottom: 2.5rem;
+}
+
+.btn-account {
+  background-color: var(--clr-neutral-900);
+  color: var(--clr-neutral-100);
+  font-size: var(--fs-btn);
+  padding: 0.5rem 1.5rem;
+  border-radius: 10px;
+  border: none;
+  margin-top: 1rem;
+}
+
+.license {
+  margin: 1rem 0 1rem 0;
+}
+
+.continue-with {
+  display: flex;
+  flex-direction: row;
+  color: var(--clr-neutral-300);
+  gap: 0.5rem;
+}
+
+.continue-with:before,
+.continue-with:after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 1px solid var(--clr-neutral-300);
+  margin: auto;
+}
+
+.third-party-login {
+  padding: 2rem 2rem 3rem 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.login-form p:last-child {
+  text-align: center;
+}
+
+@media (max-width: 350px) {
+  .login-form {
+    padding: 3rem 1rem;
+  }
+
+  .btn-account {
+    font-size: 1rem;
+  }
+}
