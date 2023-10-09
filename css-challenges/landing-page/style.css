@@ -37,7 +37,7 @@ p {
 }
 
 .container {
-  padding: 0 var(--spacer);
+  padding: 5rem var(--spacer);
   max-width: 68rem;
   margin: 0 auto;
 }
