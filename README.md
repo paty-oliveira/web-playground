@@ -26,6 +26,7 @@
 - [Cards Page](css-challenges/cards-page/)
 - [Burger Recipe Page](css-challenges/burger-recipe-page)
 - [Login Page](css-challenges/login-page)
+- [Landing Page](css-challenges/landing-page)
 
 ## Javascript
 
