@@ -27,6 +27,7 @@
 - [Burger Recipe Page](css-challenges/burger-recipe-page)
 - [Login Page](css-challenges/login-page)
 - [Landing Page](css-challenges/landing-page)
+- [Blog Page](css-challenges/blog-page)
 
 ## Javascript
 
