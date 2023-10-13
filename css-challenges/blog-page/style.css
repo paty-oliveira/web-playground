@@ -25,6 +25,7 @@
   --clr-primary-300: #f3f7ff;
   --clr-primary-400: #8ea8da;
 
+  --flow-space: 1.5rem;
   --br: 1rem;
 }
 
@@ -112,9 +113,55 @@ h3,
   color: var(--clr-neutral-400);
 }
 
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: vaR(--clr-neutral-900);
+}
+
 /* General Layout */
+
+section {
+  padding: 2.5rem 0;
+}
+
+@media (min-width: 40em) {
+  section {
+    padding: 3.5rem;
+  }
+}
 
 .container {
   max-width: 50rem;
   margin: 0 auto;
+}
+
+.flow-content > * + * {
+  margin-top: var(--flow-space, 1em);
+}
+
+.split {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.split > * {
+  flex-basis: 100%;
+}
+
+@media (min-width: 40em) {
+  .split {
+    flex-direction: row;
+  }
+}
+
+.xl-space {
+  margin-top: 5rem;
+}
+
+/* Homepage Styles */
+
+.intro {
+  --flow-space: 2em;
 }
