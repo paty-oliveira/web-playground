@@ -28,6 +28,14 @@
   --br: 1rem;
 }
 
+@media (min-width: 40em) {
+  :root {
+    --fs-500: 1.75rem;
+    --fs-600: 2.125rem;
+    --fs-900: 4.25rem;
+  }
+}
+
 /* reset */
 
 *,
@@ -67,4 +75,46 @@ img {
 
 body {
   line-height: 1.6;
+  font-family: var(--ff-sans);
+  font-size: var(--fs-400);
+  padding: 1.5rem;
+}
+
+/* Typography */
+
+h1,
+h2,
+h3,
+.text-serif {
+  font-family: var(--ff-serif);
+  font-weight: var(--fw-200);
+}
+
+.text-500 {
+  font-size: var(--fs-500);
+}
+
+.page-title {
+  font-size: var(--fs-900);
+}
+
+.page-intro {
+  font-size: var(--fs-600);
+}
+
+.section-title {
+  font-size: var(--fs-600);
+  color: var(--clr-neutral-300);
+}
+
+.section-subtitle {
+  font-size: var(--fs-600);
+  color: var(--clr-neutral-400);
+}
+
+/* General Layout */
+
+.container {
+  max-width: 50rem;
+  margin: 0 auto;
 }
