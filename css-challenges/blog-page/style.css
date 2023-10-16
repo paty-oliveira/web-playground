@@ -75,6 +75,17 @@ select {
   font: inherit;
 }
 
+a {
+  font-weight: var(--fw-700);
+  font-size: var(--fs-300);
+  color: var(--clr-neutral-900);
+}
+
+a:hover,
+a:focus {
+  color: var(--clr-primary-400);
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -135,7 +146,7 @@ h3,
   background: none;
   font-family: var(--ff-sans);
   font-weight: var(--fw-700);
-  font-size: var(--clr-neutral-300);
+  font-size: var(--fw-300);
   text-decoration: none;
   color: var(--clr-neutral-900);
 }
@@ -249,6 +260,34 @@ section {
   margin-bottom: 0.5em;
   font-size: var(--fs-300);
   font-weight: var(--fw-400);
+}
+
+.primary-footer__inner {
+  border-top: 2px solid var(--clr-neutral-200);
+  border-bottom: 2px solid var(--clr-neutral-200);
+  padding: 3em 0;
+  margin: 2em 0;
+}
+
+footer {
+  padding-bottom: 1em;
+}
+
+.footer-nav {
+  display: flex;
+}
+
+.footer-nav > *:first-child {
+  margin-right: 4em;
+}
+
+.footer-social {
+  display: flex;
+  gap: 2em;
+}
+
+.footer-social a {
+  font-weight: var(--fw-200);
 }
 
 /* Homepage Styles */
