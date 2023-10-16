@@ -230,6 +230,7 @@ section {
 .call-to-action form {
   margin-top: 3rem;
   display: flex;
+  flex-direction: column;
   gap: 3rem;
 }
 
@@ -260,6 +261,20 @@ section {
   margin-bottom: 0.5em;
   font-size: var(--fs-300);
   font-weight: var(--fw-400);
+}
+
+.call-to-action button {
+  align-self: flex-start;
+}
+
+@media (min-width: 40em) {
+  .call-to-action form {
+    flex-direction: row;
+  }
+
+  .call-to-action button {
+    align-self: center;
+  }
 }
 
 .primary-footer__inner {
