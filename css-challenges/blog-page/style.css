@@ -205,6 +205,66 @@ section {
 
 /* Components */
 
+.primary-header {
+  border-radius: var(--br);
+  padding: 2rem;
+  background-color: var(--clr-primary-400);
+  min-height: 50vh;
+  background: url("./img/hero.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.primary-nav {
+  position: fixed;
+  bottom: 0.5em;
+  left: 0.5em;
+  right: 0.5em;
+  border-radius: var(--br);
+  background: var(--clr-neutral-900);
+  font-family: var(--ff-serif);
+}
+
+.primary-nav ul {
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 1em 0;
+}
+
+.primary-nav li {
+  line-height: 0;
+}
+
+.primary-nav a {
+  color: var(--clr-neutral-200);
+  text-decoration: none;
+}
+
+@media (min-width: 40em) {
+  .primary-nav {
+    position: static;
+    background: transparent;
+  }
+
+  .primary-nav a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .primary-header__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .primary-nav ul {
+    padding: 0;
+  }
+
+  .primary-nav_list {
+    gap: 2rem;
+  }
+}
+
 .article-preview h3 {
   font-size: var(--fs-500);
 }
