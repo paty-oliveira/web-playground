@@ -216,8 +216,13 @@ section {
 }
 
 .primary-header .container {
+  width: 100%;
   margin-top: auto;
   margin-bottom: auto;
+}
+
+.primary-header .container > * {
+  max-width: 12ch;
 }
 
 .page-home .primary-header {
@@ -279,6 +284,27 @@ section {
   .primary-nav_list {
     gap: 2rem;
   }
+}
+
+.secondary-navigation {
+  display: flex;
+  align-items: center;
+  margin: 2rem 0;
+  justify-content: space-between;
+}
+
+.categories {
+  margin: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+.categories button {
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: var(--fs-200);
+  background: none;
+  border: 0;
 }
 
 .article-preview h3 {
