@@ -129,14 +129,18 @@ h3,
   font-size: var(--fs-600);
 }
 
-.section-title {
+.section-title,
+.article-full h3 {
   font-size: var(--fs-600);
   color: var(--clr-neutral-300);
 }
 
-.section-subtitle {
+.section-subtitle,
+.article-full h2,
+.article-full > div > p {
   font-size: var(--fs-600);
   color: var(--clr-neutral-400);
+  font-family: var(--ff-serif);
 }
 
 .btn {
