@@ -28,6 +28,7 @@
 - [Login Page](css-challenges/login-page)
 - [Landing Page](css-challenges/landing-page)
 - [Blog Page](css-challenges/blog-page)
+- [Knitting Pro Page](css-challenges/knitting-pro-page/)
 
 ## Javascript
 
