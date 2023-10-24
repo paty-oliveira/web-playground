@@ -1,0 +1,11 @@
+:root {
+  --clr-primary: #0469dc;
+  --clr-secondary: #5858da;
+  --clr-neutral-light: #f5f7fa;
+  --clr-neutral-medium: #737b8c;
+  --clr-neutral-medium-dark: #434956;
+  --clr-neutral-dark: #020203;
+
+  --fm-primary: "Poppins", sans-serif;
+  --fm-secondary: "IBM Plex Serif", serif;
+}
