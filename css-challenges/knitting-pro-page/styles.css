@@ -37,6 +37,7 @@ button,
 textarea,
 select {
   font: inherit;
+  color: inherit;
 }
 
 a {
@@ -62,10 +63,6 @@ body {
   display: flex;
 }
 
-.text-blue {
-  color: var(--clr-primary);
-}
-
 /* Button Styles */
 
 .btn {
@@ -74,7 +71,7 @@ body {
   border: 0;
   background: none;
   padding: 0.25rem 0.75rem;
-  border-radius: 22px;
+  border-radius: 1.375rem;
   font-weight: 500;
 }
 
@@ -89,9 +86,56 @@ body {
 }
 
 .small {
-  font-size: 13px;
+  font-size: 0.813rem;
 }
 
 .large {
-  font-size: 20px;
+  font-size: 1.25rem;
+}
+
+/* Typography */
+
+.main-title {
+  font-size: 5rem;
+}
+
+p:not(.courses) {
+  font-size: 1.063;
+}
+
+.courses p,
+.contacts {
+  font-size: 1rem;
+}
+
+.courses-nav > * {
+  font-size: 0.813rem;
+}
+
+.start-learning h2 {
+  font-size: 2.125rem;
+}
+
+.become-instructor h2 {
+  font-size: 3.375rem;
+}
+
+.weight-300 {
+  font-weight: 300;
+}
+
+.weight-600 {
+  font-weight: 600;
+}
+
+.text-blue {
+  color: var(--clr-primary);
+}
+
+.text-dark {
+  color: var(--clr-neutral-dark);
+}
+
+.text-dark-medium {
+  color: var(--clr-neutral-medium-dark);
 }
