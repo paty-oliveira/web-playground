@@ -54,7 +54,7 @@ img {
 body {
   line-height: 1.6;
   font-family: var(--fm-primary);
-  padding: 2rem 3rem;
+  padding: 0 3rem;
 }
 
 /* Utility Classes */
@@ -138,4 +138,26 @@ p:not(.courses) {
 
 .text-dark-medium {
   color: var(--clr-neutral-medium-dark);
+}
+
+/* Section Spaces */
+
+.vertical-space-s {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.vertical-space-m {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.vertical-space-l {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.horizontal-space-large {
+  padding-left: 7rem;
+  padding-right: 7rem;
 }
