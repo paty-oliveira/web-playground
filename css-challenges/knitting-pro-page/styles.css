@@ -55,3 +55,43 @@ body {
   font-family: var(--fm-primary);
   padding: 2rem 3rem;
 }
+
+/* Utility Classes */
+
+.flex {
+  display: flex;
+}
+
+.text-blue {
+  color: var(--clr-primary);
+}
+
+/* Button Styles */
+
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  border: 0;
+  background: none;
+  padding: 0.25rem 0.75rem;
+  border-radius: 22px;
+  font-weight: 500;
+}
+
+.primary {
+  background-color: var(--clr-primary);
+  color: var(--clr-neutral-light);
+}
+
+.secondary {
+  background-color: var(--clr-neutral-dark);
+  color: var(--clr-neutral-light);
+}
+
+.small {
+  font-size: 13px;
+}
+
+.large {
+  font-size: 20px;
+}
