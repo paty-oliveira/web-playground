@@ -221,6 +221,10 @@ p:not(.courses) {
 
 /* Header Styling */
 
+.search-bar input {
+  min-width: 25em;
+}
+
 .search-bar > * {
   border: none;
   padding: 0.25rem 1rem;
