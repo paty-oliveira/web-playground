@@ -265,3 +265,9 @@ p:not(.courses) {
 .become-instructor div:first-child > * {
   min-width: 30rem;
 }
+
+/* Footer Styling */
+
+.primary-footer .copywrite {
+  justify-content: flex-start;
+}
