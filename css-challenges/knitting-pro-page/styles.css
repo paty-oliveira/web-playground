@@ -166,3 +166,31 @@ p:not(.courses) {
   padding-left: 7rem;
   padding-right: 7rem;
 }
+
+/* Colors */
+
+.bg-light {
+  background-color: var(--clr-neutral-light);
+}
+
+/* Components */
+
+.search-bar > * {
+  border: none;
+  padding: 0.25rem 1rem;
+}
+
+.search-bar input {
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.search-bar button {
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background-image: url("assets/search.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-color: var(--clr-neutral-light);
+}
