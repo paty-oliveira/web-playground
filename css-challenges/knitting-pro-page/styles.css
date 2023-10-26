@@ -59,6 +59,9 @@ img:not(.logo) {
 body {
   line-height: 1.6;
   font-family: var(--fm-primary);
+}
+
+section {
   padding: 0 3rem;
 }
 
@@ -160,6 +163,11 @@ p:not(.courses) {
 .vertical-space-l {
   padding-top: 3.5rem;
   padding-bottom: 3.5rem;
+}
+
+.horizontal-space-medium {
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 .horizontal-space-large {
