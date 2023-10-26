@@ -8,6 +8,8 @@
 
   --fm-primary: "Poppins", sans-serif;
   --fm-secondary: "IBM Plex Serif", serif;
+
+  --flow-space: 1rem;
 }
 
 /* reset */
@@ -85,6 +87,10 @@ section {
   display: flex;
   justify-content: space-between;
   align-content: center;
+}
+
+.flow-content > * + * {
+  margin-top: var(--flow-space, 1em);
 }
 
 /* Button Styles */
@@ -263,7 +269,26 @@ p:not(.courses) {
 }
 
 .become-instructor div:first-child > * {
-  min-width: 30rem;
+  width: 100%;
+}
+
+.become-instructor {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+}
+
+.become-instructor > div:nth-child(2) {
+  padding: 8em;
+}
+
+.primary-footer::before {
+  content: "";
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--clr-neutral-light);
 }
 
 /* Footer Styling */
