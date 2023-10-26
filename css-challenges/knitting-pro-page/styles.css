@@ -69,6 +69,8 @@ section {
 
 .flex {
   display: flex;
+  justify-content: space-between;
+  align-content: center;
 }
 
 /* Button Styles */
@@ -173,6 +175,14 @@ p:not(.courses) {
 .horizontal-space-large {
   padding-left: 7rem;
   padding-right: 7rem;
+}
+
+.gap-small {
+  gap: 1rem;
+}
+
+.gap-medium {
+  gap: 2rem;
 }
 
 /* Colors */
