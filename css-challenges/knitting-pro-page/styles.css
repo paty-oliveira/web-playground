@@ -191,12 +191,20 @@ p:not(.courses) {
   padding-right: 7rem;
 }
 
-.gap-small {
+.gap-s {
   gap: 1rem;
 }
 
-.gap-medium {
+.gap-m {
   gap: 2rem;
+}
+
+.gap-l {
+  gap: 6rem;
+}
+
+.gap-xl {
+  gap: 12rem;
 }
 
 /* Colors */
@@ -205,7 +213,7 @@ p:not(.courses) {
   background-color: var(--clr-neutral-light);
 }
 
-/* Components */
+/* Header Styling */
 
 .search-bar > * {
   border: none;
@@ -225,4 +233,23 @@ p:not(.courses) {
   background-repeat: no-repeat;
   cursor: pointer;
   background-color: var(--clr-neutral-light);
+}
+
+/* Start Learning Section Styling */
+
+.start-learning {
+  justify-content: center;
+}
+
+.start-learning div:first-child {
+  width: 30%;
+}
+
+.start-learning div:nth-child(2) {
+  width: 20%;
+}
+
+.start-learning .more-info {
+  justify-content: flex-start;
+  align-items: center;
 }
