@@ -56,13 +56,27 @@ img:not(.logo) {
   box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 4, 0.25);
 }
 
+/* General Layout */
+
 body {
   line-height: 1.6;
   font-family: var(--fm-primary);
 }
 
 section {
-  padding: 0 3rem;
+  padding: 0 2rem;
+}
+
+@media (min-width: 40em) {
+  section {
+    padding: 0 3rem;
+  }
+}
+
+.hero {
+  max-width: max-content;
+  margin: 0 auto;
+  padding: 0;
 }
 
 /* Utility Classes */
