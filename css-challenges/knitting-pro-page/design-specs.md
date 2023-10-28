@@ -11,7 +11,7 @@
 
 ## Typography
 
-### Fonts: 
+### Fonts
 
 - Poppins
   - Light
@@ -21,7 +21,7 @@
 - IBM Plex Serif
   - Regular
 
-### Font sizes:
+### Font sizes
 
 If multiple font-sizes are listed, it is for the different screen sizes, from smallest to biggest. If only one is listed, it is the same at all sizes.
 
@@ -46,4 +46,3 @@ If multiple font-sizes are listed, it is for the different screen sizes, from sm
 
 - Knitting community section title: 34px
 - Become an instructor section title: 54px
-

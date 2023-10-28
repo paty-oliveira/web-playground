@@ -150,7 +150,6 @@ p:not(.courses) {
   font-size: 1.063;
 }
 
-.courses p,
 .contacts {
   font-size: 1rem;
 }
@@ -236,6 +235,14 @@ p:not(.courses) {
   background-color: var(--clr-neutral-light);
 }
 
+.bg-blue {
+  background-color: var(--clr-primary);
+}
+
+.bg-violet {
+  background-color: var(--clr-secondary);
+}
+
 /* Header Styling */
 
 .search-bar input {
@@ -266,6 +273,63 @@ p:not(.courses) {
 
 .courses-nav ul li:hover {
   border-bottom: var(--clr-neutral-dark) 3px solid;
+}
+
+/* Courses Section Styling */
+
+.card {
+  padding: 1.75rem;
+  border-radius: 1.25rem;
+}
+
+.card-header {
+  justify-content: space-around;
+  align-content: center;
+}
+
+.course-level {
+  color: var(--clr-neutral-light);
+  border-radius: 1.25rem;
+  padding: 0.25rem 1rem;
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+
+.course-rating {
+  align-items: center;
+}
+
+.course-title {
+  font-size: 2.125rem;
+  font-weight: 700;
+}
+
+.course-author {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--clr-neutral-medium);
+}
+
+.course-description {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--clr-neutral-medium);
+}
+
+.card-footer {
+  padding-top: 2rem;
+}
+
+.course-price {
+  font-size: 1.25rem;
+}
+
+.price-promotion {
+  font-size: 0.75rem;
+}
+
+.price-promotion span {
+  text-decoration: line-through;
 }
 
 /* Start Learning Section Styling */
