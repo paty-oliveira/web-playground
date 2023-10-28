@@ -245,6 +245,12 @@ p:not(.courses) {
   background-color: var(--clr-neutral-light);
 }
 
+/* Navigation Section Styling */
+
+.courses-nav ul li:hover {
+  border-bottom: var(--clr-neutral-dark) 3px solid;
+}
+
 /* Start Learning Section Styling */
 
 .start-learning {
