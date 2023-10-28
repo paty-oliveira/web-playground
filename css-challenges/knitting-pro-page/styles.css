@@ -89,6 +89,12 @@ section {
   align-content: center;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
 .flow-content > * + * {
   margin-top: var(--flow-space, 1em);
 }
@@ -283,9 +289,15 @@ p:not(.courses) {
 }
 
 .card-header {
-  justify-content: space-around;
+  justify-content: space-between;
   align-content: center;
 }
+
+.card:first-child {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+}
+/* TODO Each card needs to have a grid to achieve the design proposed */
 
 .course-level {
   color: var(--clr-neutral-light);
