@@ -93,6 +93,13 @@ section {
   margin-top: var(--flow-space, 1em);
 }
 
+/* Links Styles */
+
+.nav-link:hover,
+.nav-link:active {
+  opacity: 0.6;
+}
+
 /* Button Styles */
 
 .btn {
