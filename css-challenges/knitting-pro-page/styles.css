@@ -284,20 +284,49 @@ p:not(.courses) {
 /* Courses Section Styling */
 
 .card {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content 1fr;
   padding: 1.75rem;
   border-radius: 1.25rem;
 }
 
-.card-header {
+.card header {
   justify-content: space-between;
   align-content: center;
 }
 
-.card:first-child {
-  display: grid;
-  grid-template-rows: repeat(4, 1fr);
+.card:nth-child(1),
+.card:nth-child(2),
+.card:nth-child(3),
+.card:nth-child(5),
+.card:nth-child(6) {
+  align-items: center;
 }
-/* TODO Each card needs to have a grid to achieve the design proposed */
+
+.card:nth-child(4) {
+  align-items: end;
+}
+
+.card:nth-child(1) main,
+.card:nth-child(2) main,
+.card:nth-child(3) main,
+.card:nth-child(5) main,
+.card:nth-child(6) main {
+  grid-row: 3 / 4;
+}
+
+.card:nth-child(4) main {
+  grid-row: 2 / 3;
+}
+
+.card:nth-child(1) footer,
+.card:nth-child(2) footer,
+.card:nth-child(3) footer,
+.card:nth-child(4) footer,
+.card:nth-child(5) footer,
+.card:nth-child(6) footer {
+  grid-row: 4 / 5;
+}
 
 .course-level {
   color: var(--clr-neutral-light);
@@ -328,7 +357,7 @@ p:not(.courses) {
   color: var(--clr-neutral-medium);
 }
 
-.card-footer {
+.card footer {
   padding-top: 2rem;
 }
 
