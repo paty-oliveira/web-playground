@@ -21,9 +21,13 @@
 }
 
 h1,
+h1[class],
 h2,
+h2[class],
 h3,
+h3[class],
 p,
+p[class],
 body {
   margin: 0;
 }
