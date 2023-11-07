@@ -8,3 +8,42 @@
   --fm-primary: "DM Sans", sans-serif;
   --fm-secondary: "Stalinist One", sans-serif;
 }
+
+/* reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h1[class],
+h2,
+h2[class],
+h3,
+h3[class],
+p,
+p[class],
+body {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
