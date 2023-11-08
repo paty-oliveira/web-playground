@@ -1,5 +1,6 @@
 :root {
   --clr-primary: #fff;
+  --clr-secondary: #a9afbc;
 
   --fs-title: 1.375rem;
   --fs-timer-numbers: 4.375rem;
@@ -95,7 +96,7 @@ body {
 /* Colors */
 
 .text-grey {
-  color: #a9afbc;
+  color: var(--clr-secondary);
 }
 
 /* Components Styling */
@@ -104,6 +105,14 @@ body {
   background: none;
   border: solid 1px var(--clr-primary);
   padding: 0.5rem 1.25rem;
+}
+
+.card {
+  border-top-width: 1px;
+  border-radius: 12px;
+  padding: 6rem 1.5rem;
+  border: solid 0.25px var(--clr-secondary);
+  flex: 1;
 }
 
 /* Main Section Styling */
@@ -115,6 +124,7 @@ main {
 
 main h1 {
   font-size: var(--fs-title);
+  padding-bottom: 3rem;
 }
 
 .card h2 {
