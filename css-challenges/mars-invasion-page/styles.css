@@ -49,6 +49,8 @@ textarea,
 select {
   font: inherit;
   color: inherit;
+  padding: 0;
+  margin: 0;
 }
 
 a {
@@ -76,6 +78,7 @@ body {
 .flex {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 2rem;
 }
 
@@ -93,6 +96,14 @@ body {
 
 .text-grey {
   color: #a9afbc;
+}
+
+/* Components Styling */
+
+.btn {
+  background: none;
+  border: solid 1px var(--clr-primary);
+  padding: 0.5rem 1.25rem;
 }
 
 /* Main Section Styling */
