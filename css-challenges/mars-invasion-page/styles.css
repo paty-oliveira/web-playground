@@ -61,13 +61,14 @@ a {
 /* General Layout */
 
 body {
+  padding: 2rem 6rem;
   font-family: var(--fm-primary);
   color: var(--clr-primary);
   background-image: url("assets/mars-bg.jpg");
   background-position: center center;
   display: grid;
   grid-template-rows: min-content 1fr 1fr 1fr 1fr;
-  padding: 2rem 6rem;
+  align-items: center;
 }
 
 /* Utility Classes */
@@ -98,6 +99,7 @@ body {
 
 main {
   text-align: center;
+  grid-row: 3 / 4;
 }
 
 main h1 {
@@ -111,4 +113,10 @@ main h1 {
 
 .card p {
   font-size: var(--fs-timer-text);
+}
+
+/* Footer Section Styling */
+
+footer {
+  grid-row: 5 / 6;
 }
