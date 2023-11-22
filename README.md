@@ -30,6 +30,7 @@
 - [Blog Page](css-challenges/blog-page)
 - [Knitting Pro Page](css-challenges/knitting-pro-page/)
 - [Mars Invasion Page](css-challenges/mars-invasion-page/)
+- [Responsive Layout Challenge](css-challenges/responsive-layout/)
 
 ## Javascript
 
