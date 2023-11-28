@@ -47,6 +47,7 @@ p {
   /* display: flex => flex container */
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   /* can't use yet */
   /* gap: 100px; */
@@ -66,12 +67,20 @@ header {
   padding: 0.5em 0;
 }
 
+.nav {
+  flex-grow: 1;
+}
+
 .nav__list {
   margin: 0;
   padding: 0;
   list-style: none;
   justify-content: flex-start;
   gap: 1em;
+}
+
+.nav__list--primary {
+  margin: 0 auto;
 }
 
 .nav__link {
