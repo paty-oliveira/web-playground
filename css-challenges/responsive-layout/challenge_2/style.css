@@ -17,11 +17,95 @@
 
 h1,
 h2,
-p {
+p,
+body {
   margin: 0;
   padding: 0;
 }
 
+p {
+  line-height: 1.5em;
+}
+
 img {
-  max-width: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: var(--ff-primary);
+  font-weight: 300;
+  font-size: 21px;
+}
+
+/* Utility Classes */
+
+.flex {
+  display: flex;
+  gap: 3em;
+}
+
+.container {
+  padding: 3em;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.bg-beige {
+  background-color: var(--clr-primary);
+}
+
+.bg-dark {
+  background-color: var(--clr-tertiary);
+}
+
+.bg-brown {
+  background-color: var(--clr-secondary);
+}
+
+.text-brown {
+  color: var(--clr-secondary);
+}
+
+.text-beige {
+  color: var(--clr-primary);
+}
+
+.text-white {
+  color: white;
+}
+
+.title {
+  font-family: var(--ff-secondary);
+  font-size: 35px;
+  margin-bottom: 0.5em;
+}
+
+/* Sections Styling */
+
+.hero {
+  text-align: center;
+  font-family: var(--ff-secondary);
+  font-size: 60px;
+  padding: 3em;
+}
+
+.hero div {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.hero div p {
+  font-size: 18px;
+  font-family: var(--ff-primary);
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+}
+
+.image {
+  width: 100%;
+}
+
+.col {
+  width: 100%;
 }
