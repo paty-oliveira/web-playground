@@ -1,0 +1,27 @@
+:root {
+  --clr-primary: #f3eed9;
+  --clr-secondary: #824936;
+  --clr-tertiary: #222c2a;
+
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Playfair Display", serif;
+}
+
+/* reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
