@@ -68,10 +68,12 @@ header {
 }
 
 .nav {
+  display: flex;
   flex-grow: 1;
 }
 
 .nav__list {
+  display: flex;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -157,4 +159,25 @@ header {
 
 .content__info div:not(:last-child) {
   margin-bottom: 2em;
+}
+
+@media (max-width: 600px) {
+  .row {
+    display: block;
+  }
+
+  .col + .col {
+    margin: 0;
+  }
+
+  .hero__text,
+  .hero__img,
+  .content__intro,
+  .content__info {
+    width: 100%;
+  }
+
+  .hero__img {
+    margin-top: 2em;
+  }
 }
