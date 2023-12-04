@@ -24,24 +24,24 @@ body {
 }
 
 p {
-  line-height: 1.5em;
+  line-height: 1.6;
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
 }
 
 body {
   font-family: var(--ff-primary);
   font-weight: 300;
-  font-size: 21px;
+  font-size: 1.3125rem;
 }
 
 /* Utility Classes */
 
 .flex {
   display: flex;
-  gap: 3em;
+  gap: 4em;
 }
 
 .container {
@@ -80,26 +80,29 @@ body {
   margin-bottom: 0.5em;
 }
 
-/* Sections Styling */
-
-.hero {
-  text-align: center;
-  font-family: var(--ff-secondary);
-  font-size: 60px;
-  padding: 3em;
-}
-
-.hero div {
-  width: 70%;
-  margin: 0 auto;
-}
-
-.hero div p {
+.subtitle {
   font-size: 18px;
   font-family: var(--ff-primary);
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 0.4em;
+}
+/* Sections Styling */
+
+.hero {
+  text-align: center;
+  font-family: var(--ff-secondary);
+  font-size: 3rem;
+  padding: 3em;
+}
+
+.hero > * {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.intro .title {
+  text-align: center;
 }
 
 .image {
