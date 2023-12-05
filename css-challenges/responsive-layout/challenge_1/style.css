@@ -162,6 +162,15 @@ header {
 }
 
 @media (max-width: 600px) {
+  .nav {
+    display: none;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+  }
+
   .row {
     display: block;
   }
