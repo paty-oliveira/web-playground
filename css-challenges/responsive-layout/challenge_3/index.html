@@ -13,17 +13,17 @@
     <title>Responsive Layout</title>
   </head>
   <body>
-    <header>
-      <img src="./assets/logo.svg" alt="logo" />
-      <nav>
-        <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
+    <header class="flex bg-gunmetal text-white">
+      <img src="./assets/logo.svg" alt="logo" class="logo" />
+      <nav class="flex">
+        <ul class="nav__list flex">
+          <li class="nav__item title">Home</li>
+          <li class="nav__item title">About</li>
+          <li class="nav__item title">Contact</li>
         </ul>
-        <ul>
-          <li><button>Sign in</button></li>
-          <li><button>Sign up</button></li>
+        <ul class="nav__list flex">
+          <li class="nav__item title"><a>Sign in</a></li>
+          <li class="nav__item title"><a class="nav__link">Sign up</a></li>
         </ul>
       </nav>
     </header>

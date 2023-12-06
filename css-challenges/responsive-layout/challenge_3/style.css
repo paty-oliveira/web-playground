@@ -61,3 +61,76 @@ img {
 .container {
   padding: 3rem;
 }
+
+.flex {
+  display: flex;
+}
+
+/* Typography */
+
+.title {
+  font-family: var(--ff-heading);
+}
+
+.text {
+  font-family: var(--ff-text);
+}
+
+/* Colors */
+
+.text-white {
+  color: var(--clr-white);
+}
+
+.bg-gunmetal {
+  background-color: var(--clr-gunmetal);
+}
+
+/* Sections Styling */
+
+header {
+  padding: 0.75rem 3rem 0.75rem 3rem;
+  justify-content: space-between;
+}
+
+nav {
+  gap: 1.5rem;
+}
+
+.nav__list {
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.nav__item {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+.logo {
+  max-width: 10%;
+}
+
+.nav__link {
+  background-color: var(--clr-donkey-brown);
+  padding: 0.2em 1em;
+  border-radius: 2em;
+}
+
+@media (min-width: 700px) {
+  nav {
+    gap: 4rem;
+  }
+
+  .nav__list {
+    gap: 2.5rem;
+  }
+
+  .nav__item {
+    font-size: 1.125rem;
+  }
+
+  .logo {
+    max-width: 100%;
+  }
+}
