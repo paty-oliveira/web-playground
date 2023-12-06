@@ -55,3 +55,9 @@ select {
 img {
   max-width: 100%;
 }
+
+/* Layout */
+
+.container {
+  padding: 3rem;
+}
