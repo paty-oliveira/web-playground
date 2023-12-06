@@ -8,3 +8,7 @@
   --clr-white: #ffffff;
   --clr-donkey-brown: #a59678;
 }
+
+img {
+  max-width: 100%;
+}
