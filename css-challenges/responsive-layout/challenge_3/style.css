@@ -7,6 +7,7 @@
   --clr-pale-sky: #6f737f;
   --clr-white: #ffffff;
   --clr-donkey-brown: #a59678;
+  --clr-light: rgba(238, 236, 236, 0.988);
 }
 
 /* Reset */
@@ -101,6 +102,10 @@ img {
   background-color: var(--clr-bright-grey);
 }
 
+.bg-light {
+  background-color: rgba(238, 236, 236, 0.988);
+}
+
 /* Header Section Styling */
 
 header {
@@ -128,7 +133,7 @@ nav {
 
 .nav__link {
   background-color: var(--clr-donkey-brown);
-  padding: 0.2em 1em;
+  padding: 0.2em 0.5em;
   border-radius: 2em;
 }
 
@@ -157,11 +162,11 @@ nav {
 /* Intro Section Styling */
 
 .intro-section .title {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 .intro-section .text {
-  margin-top: 1em;
+  margin-top: 2em;
 }
 
 .intro-section .btn {
@@ -197,5 +202,39 @@ nav {
   .intro-section .text,
   .intro-section .btn {
     font-size: 1.5rem;
+  }
+}
+
+/* Medium Section Styling */
+
+.medium-section .content:not(:last-child) {
+  margin-bottom: 2.5em;
+}
+
+.medium-section .title {
+  font-size: 1.5rem;
+}
+
+.medium-section .text {
+  margin-top: 1em;
+}
+
+@media (min-width: 700px) {
+  .medium-section .container {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+  }
+
+  .medium-section .content {
+    flex-basis: 30%;
+  }
+
+  .medium-section .title {
+    font-size: 1.875rem;
+  }
+
+  .medium-section .text {
+    font-size: 1.313rem;
   }
 }
