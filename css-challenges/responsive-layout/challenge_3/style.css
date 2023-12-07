@@ -50,6 +50,7 @@ button,
 textarea,
 select {
   font: inherit;
+  color: inherit;
 }
 
 img {
@@ -64,6 +65,12 @@ img {
 
 .flex {
   display: flex;
+}
+
+@media (min-width: 700px) {
+  .container {
+    padding: 6rem;
+  }
 }
 
 /* Typography */
@@ -82,11 +89,19 @@ img {
   color: var(--clr-white);
 }
 
+.text-brown {
+  color: var(--clr-donkey-brown);
+}
+
 .bg-gunmetal {
   background-color: var(--clr-gunmetal);
 }
 
-/* Sections Styling */
+.bg-grey {
+  background-color: var(--clr-bright-grey);
+}
+
+/* Header Section Styling */
 
 header {
   padding: 0.75rem 3rem 0.75rem 3rem;
@@ -118,6 +133,10 @@ nav {
 }
 
 @media (min-width: 700px) {
+  header {
+    padding: 2rem 6rem 2rem 6rem;
+  }
+
   nav {
     gap: 4rem;
   }
@@ -132,5 +151,51 @@ nav {
 
   .logo {
     max-width: 100%;
+  }
+}
+
+/* Intro Section Styling */
+
+.intro-section .title {
+  font-size: 2rem;
+}
+
+.intro-section .text {
+  margin-top: 1em;
+}
+
+.intro-section .btn {
+  margin-top: 1em;
+  text-transform: uppercase;
+  font-family: var(--ff-heading);
+  background-color: var(--clr-donkey-brown);
+  border-radius: 1em;
+  border: 0;
+  padding: 0.5em 1em;
+}
+
+@media (min-width: 700px) {
+  .intro-section .container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  .intro-section .title {
+    font-size: 4.375rem;
+    flex-basis: 50%;
+  }
+
+  .intro-section .content {
+    flex-basis: 40%;
+  }
+
+  .intro-section .text {
+    margin: 0;
+  }
+
+  .intro-section .text,
+  .intro-section .btn {
+    font-size: 1.5rem;
   }
 }
