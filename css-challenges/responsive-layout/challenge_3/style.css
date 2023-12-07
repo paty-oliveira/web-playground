@@ -238,3 +238,69 @@ nav {
     font-size: 1.313rem;
   }
 }
+
+/* End Section Styling */
+
+.end-section .title {
+  font-size: 2rem;
+}
+
+.end-section .text {
+  margin-top: 1em;
+}
+
+.end-section .sidebar {
+  margin-top: 3em;
+}
+
+.end-section .sidebar .title {
+  font-size: 1.5rem;
+}
+
+.end-section .sidebar .content {
+  text-align: center;
+  padding: 1.5em 3em;
+}
+
+.end-section .sidebar .content {
+  margin-bottom: 2.5em;
+}
+
+@media (min-width: 700px) {
+  .end-section .title {
+    font-size: 36px;
+  }
+
+  .end-section .text {
+    font-size: 21px;
+  }
+
+  .section-img {
+    margin-top: 1.5em;
+  }
+
+  .end-section .sidebar {
+    display: flex;
+    gap: 2em;
+  }
+
+  .end-section .sidebar .title {
+    font-size: 1.875rem;
+  }
+
+  .end-section .sidebar .text {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .end-section .container {
+    display: flex;
+    gap: 5em;
+  }
+
+  .end-section .sidebar {
+    display: block;
+    margin: 0;
+  }
+}
