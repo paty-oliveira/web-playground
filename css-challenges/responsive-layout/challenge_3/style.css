@@ -78,10 +78,12 @@ img {
 
 .title {
   font-family: var(--ff-heading);
+  line-height: 1.5em;
 }
 
 .text {
   font-family: var(--ff-text);
+  line-height: 1.75em;
 }
 
 /* Colors */
@@ -302,5 +304,38 @@ nav {
   .end-section .sidebar {
     display: block;
     margin: 0;
+  }
+}
+
+/* Footer Section Styling */
+
+footer .title {
+  font-size: 2rem;
+}
+
+footer .content .title {
+  font-size: 1.5rem;
+}
+
+footer .content {
+  margin-top: 2em;
+}
+
+footer .content__item {
+  margin-top: 0.8em;
+}
+
+@media (min-width: 700px) {
+  footer .title {
+    font-size: 3rem;
+  }
+
+  footer .wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  footer .content__about {
+    width: 40%;
   }
 }
