@@ -108,6 +108,17 @@ img {
   background-color: rgba(238, 236, 236, 0.988);
 }
 
+/* Navigation Links States Styling */
+
+.btn:hover,
+.btn:focus,
+.nav__link:hover,
+.nav__link:focus,
+footer .content__link:hover,
+footer .content__link:focus {
+  opacity: 0.3;
+}
+
 /* Header Section Styling */
 
 header {
@@ -137,6 +148,7 @@ nav {
   background-color: var(--clr-donkey-brown);
   padding: 0.2em 0.5em;
   border-radius: 2em;
+  cursor: pointer;
 }
 
 @media (min-width: 700px) {
@@ -179,6 +191,7 @@ nav {
   border-radius: 1em;
   border: 0;
   padding: 0.5em 1em;
+  cursor: pointer;
 }
 
 @media (min-width: 700px) {
@@ -323,6 +336,10 @@ footer .content {
 
 footer .content__item {
   margin-top: 0.8em;
+}
+
+footer .content__link {
+  cursor: pointer;
 }
 
 @media (min-width: 700px) {
