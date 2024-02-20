@@ -55,6 +55,7 @@
 - [Credit Card Masking](js-challenges/credit-card-masking)
 - [Convert Number to Ascii representation](js-challenges/convert-number)
 - [Simple Tasks Board](node-js-challenges/tasks-board)
+- [High-Order Functions Series](js-challenges/hof-series/)
 
 ## Typescript
 
