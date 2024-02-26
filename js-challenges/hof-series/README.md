@@ -6,3 +6,4 @@ This kata is part of the Coding Meetup series which includes a number of short a
 2. [Higher-Order Functions Series - Greet developers](./kata2)
 3. [Higher-Order Functions Series - Is Ruby coming?](./kata3)
 4. [Higher-Order Functions Series - Find the first Python developer](./kata4/)
+5. [Higher-Order Functions Series - Prepare the count of languages](./kata5/)
