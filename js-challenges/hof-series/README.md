@@ -8,3 +8,4 @@ This kata is part of the Coding Meetup series which includes a number of short a
 4. [Higher-Order Functions Series - Find the first Python developer](./kata4/)
 5. [Higher-Order Functions Series - Prepare the count of languages](./kata5/)
 6. [Higher-Order Functions Series - Can they code in the same language?](./kata6/)
+7. [Higher-Order Functions Series - Find the most senior developer](./kata7/)
