@@ -9,3 +9,4 @@ This kata is part of the Coding Meetup series which includes a number of short a
 5. [Higher-Order Functions Series - Prepare the count of languages](./kata5/)
 6. [Higher-Order Functions Series - Can they code in the same language?](./kata6/)
 7. [Higher-Order Functions Series - Find the most senior developer](./kata7/)
+8. [Higher-Order Functions Series - Will all continents be represented?](./kata8/)
