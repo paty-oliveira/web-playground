@@ -1,13 +1,11 @@
-import '@testing-library/jest-dom'
-import {render} from "@testing-library/react"
-import App from "../App"
+import { render } from "@testing-library/react";
+import App from "../App";
 
-test('demo', () => {
-	expect(true).toBe(true)
-})
+describe("App", () => {
+  it("should render a Card Text", () => {
+    const { getByRole } = render(<App />);
 
-test("Renders the main page", async () => {
-	const {findAllByRole} = render(<App/>)
-	const users = await findAllByRole("listitem");
-	expect(users).toHaveLength(2);
-})
+    const cardText = getByRole("text-card");
+    expect(cardText).toBeInTheDocument();
+  });
+});

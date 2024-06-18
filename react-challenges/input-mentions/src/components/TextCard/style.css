@@ -1,0 +1,12 @@
+.text-card {
+    border: 2px solid black;
+    width: 300px;
+    padding: 12px;
+    height: 300px;
+}
+
+textarea {
+    height: 100%;
+    width: 100%;
+    border: none;
+}

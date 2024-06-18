@@ -1,4 +1,7 @@
-.test {
-    box-sizing: border-box;
-    border: 1px black solid;
+.layout {
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
