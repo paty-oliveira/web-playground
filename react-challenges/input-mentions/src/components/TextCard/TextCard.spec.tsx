@@ -28,10 +28,18 @@ describe("TextCard", () => {
   });
 
   it("should contain a Save button", () => {
-    const { getByRole } = render(<TextCard />);
+    const { getAllByRole } = render(<TextCard />);
 
-    const saveButton = getByRole("button");
+    const saveButton = getAllByRole("button");
 
-    expect(saveButton).toHaveAttribute("name", "save");
+    expect(saveButton[0]).toHaveAttribute("name", "save");
+  });
+
+  it("should contain a Clean button", () => {
+    const { getAllByRole } = render(<TextCard />);
+
+    const cleanButton = getAllByRole("button");
+
+    expect(cleanButton[1]).toHaveAttribute("name", "clean");
   });
 });

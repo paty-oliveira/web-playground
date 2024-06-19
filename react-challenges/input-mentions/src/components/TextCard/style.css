@@ -4,6 +4,8 @@
 
 .wrapper-btn {
     padding: 0 0 12px 0;
+    display: flex;
+    justify-content: space-between;
 }
 
 .card {
@@ -35,7 +37,12 @@ textarea:focus {
     cursor: text;
 }
 
-.save-btn {
+.btn {
     background-color: white;
     border: none;
+}
+
+.btn:hover {
+    cursor: pointer;
+    opacity: 0.5;
 }
