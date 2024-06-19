@@ -2,12 +2,14 @@ import "./style.css";
 
 const TextCard = () => {
   return (
-    <>
-      <label role="title-card">Write your post:</label>
-      <div role="text-card" className="text-card">
-        <textarea />
+    <div className="wrapper">
+      <p role="title-card" className="title">
+        Write your post:
+      </p>
+      <div className="card">
+        <textarea className="texbox" placeholder="Write here something..." />
       </div>
-    </>
+    </div>
   );
 };
 export default TextCard;
