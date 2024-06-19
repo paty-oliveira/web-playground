@@ -26,4 +26,12 @@ describe("TextCard", () => {
 
     expect(textBox).toHaveAttribute("placeholder", "Write here something...");
   });
+
+  it("should contain a Save button", () => {
+    const { getByRole } = render(<TextCard />);
+
+    const saveButton = getByRole("button");
+
+    expect(saveButton).toHaveAttribute("name", "save");
+  });
 });

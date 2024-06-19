@@ -2,10 +2,14 @@
     padding: 2rem;
 }
 
+.wrapper-btn {
+    padding: 0 0 12px 0;
+}
+
 .card {
     border: 2px solid black;
     width: 400px;
-    padding: 12px;
+    padding: 20px 20px 60px;
     height: 400px;
     border-radius: 10px;
 }
@@ -29,4 +33,9 @@ textarea:hover {
 
 textarea:focus {
     cursor: text;
+}
+
+.save-btn {
+    background-color: white;
+    border: none;
 }

@@ -1,4 +1,5 @@
 import "./style.css";
+import { FaSave } from "react-icons/fa";
 
 const TextCard = () => {
   return (
@@ -8,6 +9,11 @@ const TextCard = () => {
       </p>
       <div className="card">
         <textarea className="texbox" placeholder="Write here something..." />
+        <div className="wrapper-btn">
+          <button name="save" className="save-btn">
+            <FaSave size={30} />
+          </button>
+        </div>
       </div>
     </div>
   );
