@@ -3,11 +3,40 @@ import { FaSave } from "react-icons/fa";
 import { MdOutlineCleaningServices } from "react-icons/md";
 import { ChangeEvent, useState } from "react";
 
-const TextCard = () => {
+interface Props {
+  users: string[];
+}
+
+const TextCard = ({ users }: Props) => {
   const [post, setPost] = useState<string>(localStorage.getItem("post") || "");
+  const [mentionedUsers, setMentionedUsers] = useState<string[]>([]);
+
+  const containsUserMention = (text: string) => {
+    return text.includes("@");
+  };
+
+  const filterUserByMention = (text: string) => {
+    const pattern = /@(.+)/;
+    const match = text.match(pattern);
+
+    if (match) {
+      const userName = match[1].toLowerCase();
+      const filteredUsers = users.filter((user) =>
+        user.toLowerCase().includes(userName),
+      );
+
+      setMentionedUsers([...filteredUsers]);
+    } else setMentionedUsers([]);
+  };
 
   const handleOnChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
-    setPost(event.target.value);
+    const newPost = event.target.value;
+
+    if (containsUserMention(newPost)) {
+      filterUserByMention(newPost);
+    }
+
+    setPost(newPost);
   };
 
   const handleOnClickSave = () => {
@@ -31,6 +60,15 @@ const TextCard = () => {
           value={post}
           onChange={handleOnChange}
         />
+        {mentionedUsers.length > 0 && (
+          <ul className="users-list" role="list">
+            {mentionedUsers.map((user) => (
+              <li key={user} className="user-item">
+                {user}
+              </li>
+            ))}
+          </ul>
+        )}
         <div className="wrapper-btn">
           <button name="save" className="btn" onClick={handleOnClickSave}>
             <FaSave size={30} />
