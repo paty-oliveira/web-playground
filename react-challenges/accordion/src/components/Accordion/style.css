@@ -1,0 +1,30 @@
+.wrapper {
+    padding: 1rem 2rem;
+}
+
+.title-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+    border-bottom: solid black 2px;
+}
+
+.description-section {
+    margin-top: 1rem;
+}
+
+.accordion-icon {
+    border: solid currentcolor;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    height: 8px;
+    pointer-events: none;
+    transform: translateY(-2px) rotate(45deg);
+    width: 8px;
+}
+
+.accordion-icon--rotated {
+    transform: translateY(2px) rotate(-135deg);
+}
