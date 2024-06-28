@@ -1,30 +1,15 @@
-# React + TypeScript + Vite
+# Accordion Component Challenge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Build an Accordion component that displays a list of vertically stacked sections that each contain a title and content
+snippet. Some HTML is provided for you as example contents along with a chevron icon.
 
-Currently, two official plugins are available:
+## Requirements
+- By default, all sections are collapsed and are hidden from view.
+- Clicking on a section title toggles the contents.
+    - If the section is collapsed, the section will be expanded and the contents will be displayed.
+    - If the section is expanded, the section will be collapsed and the contents will be hidden.
+- The sections are independent of each other.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Example
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+![Example of Accordion Component](img/screenshot.png)

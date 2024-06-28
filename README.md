@@ -14,6 +14,7 @@
 - [Image Carousel](react-challenges/image-carousel)
 - [Data Fetching and Visualization](react-challenges/data-viz)
 - [Text Input Mentions](react-challenges/input-mentions)
+- [Accordion Component](react-challenges/accordion)
 
 ## CSS
 
