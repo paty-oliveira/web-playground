@@ -3,10 +3,10 @@ import {Props} from "./types.ts"
 import "./style.css"
 
 const Accordion = ({title, description}: Props) => {
-	const [hidden, setHidden] = useState(true);
+	const [isHidden, setIsHidden] = useState(true);
 
 	const handleOnClick = () => {
-		setHidden(!hidden);
+		setIsHidden(!isHidden);
 	}
 
 	return (
@@ -15,10 +15,10 @@ const Accordion = ({title, description}: Props) => {
 				{title}{' '}
 				<span
 					aria-hidden={true}
-					className={hidden ? "accordion-icon" : "accordion-icon accordion-icon--rotated"}
+					className={isHidden ? "accordion-icon" : "accordion-icon accordion-icon--rotated"}
 				/>
 			</div>
-			<div className="description-section" hidden={hidden}>
+			<div className="description-section" hidden={isHidden}>
 				{description}
 			</div>
 		</div>
